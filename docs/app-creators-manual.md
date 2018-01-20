@@ -267,6 +267,22 @@ Each App should be versioned. We distinguish between
 
 * **Production Versions** generated from a specific release in the repository. For each major release. i.e. given by a new version of dockerized software tool, a new branch should be generated in the repository. Please note, that the tag name for the Github release should not contain dots as seperators, please use "_" instead. 
 
+When creating a production version, you should make the follwoing steps. Please make it exactly in this order, 
+otherwise the tagging of the bibbox docker/hub and bibbox github will get confused.
+
+1. Generate a new branch in github, if you plan to release a major version. 
+
+2. Update all the files for the anticipated version, don't forgett to update *appinfo.json*. 
+
+3. Set in the docker compose template file (docker-compose-template.yml) 
+the tags for the docker images. Please not, that ALL used images should be tagged with an specific version, don't use the 'latest" tag, as this could break your APP in the future. 
+
+4. Tag the version in GITHUB, please don't use dots to seperate subversion but "_" (otherwise versions cannot be stored in the filesystem on the BIBBOX VM) 
+
+5. Add the tag in the DOCKER hub to build tagged images (press SAVE before TRIGGER)
+
+6. Edit in the used kit, e.g. *eB3kit.json* the version information. This file can be found in the *application-store* repository. 
+
 
 
 ## Register an App
