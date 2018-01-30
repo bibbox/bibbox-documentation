@@ -50,9 +50,11 @@ If you have a user interface on your system (e.g. it's your local PC), follow th
 
 #### 3a.) LOCAL
 
-If you download the image for local testing, this machine comes with a GUI (Graphical User Interface) and is ready to be used as is.
+If you download the image for local testing, this machine comes with a GUI (Graphical User Interface) and is ready 
+to be used as is.
 
-You can just log in with username **vagrant** and passwords **bibbox4ever** and start using the BIBBOX by accessing it in a Browser like Firefox at the URL <http://bibbox.local.test>.
+You can just log in with username **vmadmin** and passwords **bibbox4ever** and start using the BIBBOX by accessing 
+it in a Browser like Firefox at the URL <http://bibbox.local.domain>.
 
 Please be aware, that after the virtual machine has started, it takes several minutes until the BIBBOX can be accessed.
 
