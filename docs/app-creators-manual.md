@@ -2,7 +2,7 @@
 
 ## How to join the team
 
-Contact [Heimo Müller](mailto:heimo.mueller@medunigraz.at), [Robert Reihs](mailto:robert.reihs@medunigraz.at) or [Lukas Pessel](mailto:lukas.pessel@medunigraz.at). Any of them can add you to the Github team of an App repository. 
+Contact [Heimo Müller](mailto:heimo.mueller@medunigraz.at), [Robert Reihs](mailto:robert.reihs@medunigraz.at) or [Markus Plass](mailto:markus.plass@student.tugraz.at). Any of them can add you to the Github team of an App repository. 
 
 ## Anatomy of an App
 
