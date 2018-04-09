@@ -53,8 +53,8 @@ If you have a user interface on your system (e.g. it's your local PC), follow th
 If you download the image for local testing, this machine comes with a GUI (Graphical User Interface) and is ready 
 to be used as is.
 
-You can just log in with username **vmadmin** and passwords **bibbox4ever** and start using the BIBBOX by accessing 
-it in a Browser like Firefox at the URL <http://bibbox.local.domain>.
+You can just log in with username **v** and passwords **vendetta** and start using the BIBBOX by accessing 
+it in a Browser like Firefox at the URL <http://bibbox.local.domain>. (please note in previous versions username / password was **vmadmin**  / **bibbox4ever**)
 
 Please be aware, that after the virtual machine has started, it takes several minutes until the BIBBOX can be accessed.
 
@@ -63,8 +63,8 @@ Please be aware, that after the virtual machine has started, it takes several mi
 If you decided to download the server version of BIBBOX without the GUI, you will need to do some manual configuration in order to use the BIBBOX.
 
 1. First of all, you will need to decide for an URL on which to access the BIBBOX. For this, you or your organisation needs to provide a domain of the likes of **bibbox.org** or **your-domain.com**. For this example, we assume the domain is name **your-domain.com** and we want to access the BIBBOX at **bibbox.your-domain.com**.
-2. If you only have access to the terminal of your server, you can start the BIBBOX virtual machine with `VBoxManage startvm "BIBBOX_VM_NAME" --type headless`. Otherwise just start the machine from the VirtualBox GUI and log in with user **vmadmin** and password **bibbox4ever**.
-3. In case you are following this guide from command line, you will need to connect to the virtual machine by running `ssh vmadmin@192.168.10.10`, then accept the ECDSA key fingerprint by entering **yes** and providing the passwort for the user **vmadmin*, which is set to **bibbox4ever** by default.
+2. If you only have access to the terminal of your server, you can start the BIBBOX virtual machine with `VBoxManage startvm "BIBBOX_VM_NAME" --type headless`. Otherwise just start the machine from the VirtualBox GUI and log in with user **v** and password **vendetta**.
+3. In case you are following this guide from command line, you will need to connect to the virtual machine by running `ssh vmadmin@192.168.10.10`, then accept the ECDSA key fingerprint by entering **yes** and providing the passwort for the user **v*, which is set to **vendetta** by default.
 4. Now you need to make some small changes in multiple files. Please open the following files one by one with `sudo nano path/to/file`, change the URL **eb3kit.bibbox.org** to your URL (e.g. **bibbox.your-domain.com**) and save the files with **CTRL + O** and **ENTER**. You can exit the editor with **CTRL + X**.:
 
     * In `/etc/bibbox/bibbox.cfg`
