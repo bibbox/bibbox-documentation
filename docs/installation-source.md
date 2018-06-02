@@ -56,7 +56,7 @@ You can reach the BIBBOX framework with your choosen domain in any Webbrowser, a
 
 If you want to make changes to the default configuration of the portal (e.g. change the title or logo), you need to log in as **bibboxadmin**.
 
-When you enter the BIBBOX framework in commandline mode, all the components are installed under **/opt/bibbox** Whats going up there is described in the different componenets (github repositories). The guthub repositories are structured according to the following naming conventions:
+When you enter the BIBBOX framework in commandline mode, all the components are installed under **/opt/bibbox** Whats going up there is described in the different componenets (github repositories). The Github repositories are structured according to the following naming conventions:
 
 * **application-store** repository describes all applications (applications.json) and annotated lists of application for a 
     specific applicatoin doamin, called kits. Currently we provide one default kit, described in **eB3kit.json**. 
@@ -69,15 +69,18 @@ When you enter the BIBBOX framework in commandline mode, all the components are 
    docker images from the BIBBOX docker hub [BIBBOX docker hub](https://hub.docker.com/r/bibbox/). 
 
 * **SYS-.... repositories** provides the source code running inside the virtual machine, which provides all services of the BIBBOX SaaS framework. 
-  * **sys-bibbox-backend-liferay** backend of the BIBBOX portal, based on the liferay framwork. This provides functionaty for the management of 
+
+    * **sys-bibbox-backend-liferay** backend of the BIBBOX portal, based on the liferay framwork. This provides functionaty for the management of 
      applications instances, the application store and the central user management. 
-  * **sys-bibbox-frontend** all frontend code (React libraries). They are loaded by the backend at runtime. 
-  * **sys-activities** service, for logging and synchronisation of all high level activities (installation, dleeting, start/stop, etc.) 
+     
+    * **sys-bibbox-frontend** all frontend code (React libraries). They are loaded by the backend at runtime. 
+  
+    * **sys-activities** service, for logging and synchronisation of all high level activities (installation, dleeting, start/stop, etc.) 
           running as a docker container.  
-  * **sys-idmapping**  service, for mapping of internal IDs and connection to external ID systems (B2Handle, EPIC) running a a docker container. 
-  * **sys-bibbox-vmscripts** Collection of phyton scripts for
-     * management of applications, e.g. installation, port management, file management.
-     * setup script for the configuration of the portal, called after vagrant / puppet scripts are finished.
+          
+    * **sys-idmapping**  service, for mapping of internal IDs and connection to external ID systems (B2Handle, EPIC) running a a docker container. 
+  
+    * **sys-bibbox-vmscripts** Collection of phyton scripts for management of applications, e.g. installation, port management, file management, setup script for the configuration of the portal, called after vagrant / puppet scripts are finished.
      
 * **RES-.... repositories**  ressources. e.g. a common icon set for biobank applications. 
 
