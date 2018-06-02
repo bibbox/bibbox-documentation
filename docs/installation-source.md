@@ -65,7 +65,7 @@ When you enter the BIBBOX framework in commandline mode, all the components are 
    tools (kit.json in the applications directory), pre-loaded docker images and (reference) databases.  Currently we provide one default kit: 
    `kit-eb3kit`.
 
-* **APP-.... repositories** descrives BIBBOX APPs. Each BIBBOX application is compodes by  of offical docker images or 
+* **APP-.... repositories** describes BIBBOX APPs. Each BIBBOX application is compodes by  of offical docker images or 
    docker images from the [BIBBOX docker hub](https://hub.docker.com/r/bibbox/). 
 
 * **SYS-.... repositories**  source code running inside the virtual machine, which provides all services of the BIBBOX SaaS framework. 
