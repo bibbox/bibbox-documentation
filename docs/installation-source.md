@@ -26,14 +26,14 @@ For production, please calculate the additional resources you will need, dependi
 ### Software
 
 * The install scripts are tested with the UBUNTU 16.04.3 desktop version
-* Make a user v password vendetta, or replace this by an root user of your choice 
+* Make a user `v` password `vendetta`, or replace this by a root user of your choice 
 * Download and install Git -> <https://git-scm.com/>
 * Download and install openssh -> <https://help.ubuntu.com/lts/serverguide/openssh-server.html.en>
 
 
 # Installation
 
-You have to specify a domain bibbox will be accessible in the installation script. THis can be either a local domain, or a fully qualified domain name (FQDN). In case of a FQDN make sure that the BIBBOX machine has wildcard domain enabled. i.e. also subdomains can be reached. 
+You have to specify a domain bibbox will be accessible in the installation script. This can be either a local domain, or a fully qualified domain name (FQDN). In case of a FQDN make sure that the DNS/proxy has wildcard domains enabled, i.e. also subdomains can be reached. 
 
 `sudo git clone https://github.com/bibbox/kit-eb3kit.git /opt/bibbox-install`
 
@@ -46,7 +46,7 @@ Watch the installation scripts, sometime apt-get makes some problems.
 
 # Login and administration
 
-You can reach the BIBBOX framework with your choosen domain in any Webbrowser, and log into with one of the five default users and the password **graz2017**:
+You can reach the BIBBOX framework with your choosen domain in any Webbrowser, and log into with one of the five default users and the password `graz2017`:
 
 * bibboxadmin
 * admin
@@ -54,28 +54,28 @@ You can reach the BIBBOX framework with your choosen domain in any Webbrowser, a
 * curator
 * operator
 
-If you want to make changes to the default configuration of the portal (e.g. change the title or logo), you need to log in as **bibboxadmin**.
+If you want to make changes to the default configuration of the portal (e.g. change the title or logo), you need to log in as `bibboxadmin`.
 
-When you enter the BIBBOX framework in commandline mode, all the components are installed under **/opt/bibbox** Whats going up there is described in the different componenets (github repositories). The Github repositories are structured according to the following naming conventions:
+When you enter the BIBBOX framework in commandline mode, all the components are installed under `/opt/bibbox`. What's going up there is described in the different componenets (github repositories). The Github repositories are structured according to the following naming conventions:
 
-* **application-store** repository describes all applications (applications.json) and annotated lists of application for a 
-    specific applicatoin doamin, called kits. Currently we provide one default kit, described in **eB3kit.json**. 
+* **application-store**, this repository describes all applications (applications.json) and annotated lists of application for a 
+    specific domain, called kits. Currently we provide one default kit, described in `eB3kit.json`. 
 
-* **KIT-.... repositories** provide the blueprint to build a "kit". A kit is a VM providing the base BIBBOX framework together with a set of predefined 
+* **KIT-.... repositories** provides the blueprint how to build a "kit". A kit is a VM providing the base BIBBOX framework together with a set of predefined 
    tools (kit.json in the applications directory), pre-loaded docker images and (reference) databases.  Currently we provide one default kit: 
-   **kit-eb3kit**.
+   `kit-eb3kit`.
 
-* **APP-.... repositories** provide the blueprint for APPs. Each BIBBOX application is made by set of either offical docker images or 
-   docker images from the BIBBOX docker hub [BIBBOX docker hub](https://hub.docker.com/r/bibbox/). 
+* **APP-.... repositories** descrives BIBBOX APPs. Each BIBBOX application is compodes by  of offical docker images or 
+   docker images from the [BIBBOX docker hub](https://hub.docker.com/r/bibbox/). 
 
-* **SYS-.... repositories** provides the source code running inside the virtual machine, which provides all services of the BIBBOX SaaS framework. 
+* **SYS-.... repositories**  source code running inside the virtual machine, which provides all services of the BIBBOX SaaS framework. 
 
-    * **sys-bibbox-backend-liferay** backend of the BIBBOX portal, based on the liferay framwork. This provides functionaty for the management of 
+    * **sys-bibbox-backend-liferay** backend of the BIBBOX portal, based on the liferay framework. Functionality for the management of 
      applications instances, the application store and the central user management. 
      
     * **sys-bibbox-frontend** all frontend code (React libraries). They are loaded by the backend at runtime. 
   
-    * **sys-activities** service, for logging and synchronisation of all high level activities (installation, dleeting, start/stop, etc.) 
+    * **sys-activities** service, for logging and synchronisation of all high level activities (installation, app delete, start/stop, etc.) 
           running as a docker container.  
           
     * **sys-idmapping**  service, for mapping of internal IDs and connection to external ID systems (B2Handle, EPIC) running a a docker container. 
