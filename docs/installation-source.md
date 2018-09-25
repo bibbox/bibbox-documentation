@@ -27,7 +27,7 @@ For production, please calculate the additional resources you will need, dependi
 
 * The install scripts are tested with the UBUNTU 16.04.3 desktop version
 * Make a user `v` password `vendetta`, or replace this by a root user of your choice 
-* Download and install Git -> <https://git-scm.com/>
+* Download and install Git -> <https://git-scm.com/>  or use command: `sudo apt-get install git`
 * Download and install openssh -> <https://help.ubuntu.com/lts/serverguide/openssh-server.html.en>
 
 
