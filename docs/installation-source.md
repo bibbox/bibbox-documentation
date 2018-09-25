@@ -31,7 +31,13 @@ For production, please calculate the additional resources you will need, dependi
 * Download and install openssh -> <https://help.ubuntu.com/lts/serverguide/openssh-server.html.en>
 
 
+
+
 # Installation
+
+Check locale:
+Type `locale` in the commandline if the last line is "LC_ALL=" you need to change it to "LC_ALL=en_US.UTF-8"
+for this just type: `sudo nano /etc/default/locale` and add "LC_ALL=en_US.UTF-8" to the end of the document. After this restart the system with `sudo shutdown -r now` after restart `locale` should return "LC_ALL=en_US.UTF-8" in the last line.
 
 You have to specify a domain bibbox will be accessible in the installation script. This can be either a local domain, or a fully qualified domain name (FQDN). In case of a FQDN make sure that the DNS/proxy has wildcard domains enabled, i.e. also subdomains can be reached. 
 
