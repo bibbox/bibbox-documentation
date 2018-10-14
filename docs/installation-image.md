@@ -31,9 +31,7 @@ For production, please calculate the additional resources you will need, dependi
 
 ### 1.) Download BIBBOX image
 
-[SERVER] - If you want to run BIBBOX on a remote server and access it from outside with a browser, download the latest image from <http://downloads.bibbox.org/bibbox/without-GUI/bibbox-latest.ova>
-
-[LOCAL] - If you want to run BIBBOX on your local PC and just do some tests, download the latest image from <http://downloads.bibbox.org/bibbox/with-GUI/bibbox-latest.ova>
+If you want to install the BIBBOX server as a virtual machine download the latest version from  <http://bibbox.bbmri-eric.eu/resources/machine/>
 
 ### 2.) Import the image into VirtualBox
 
@@ -48,7 +46,6 @@ If you have a user interface on your system (e.g. it's your local PC), follow th
 
 ### 3.) Start the machine
 
-#### 3a.) LOCAL
 
 If you download the image for local testing, this machine comes with a GUI (Graphical User Interface) and is ready 
 to be used as is.
@@ -58,18 +55,16 @@ it in a Browser like Firefox at the URL <http://bibbox.local.domain>.
 
 Please be aware, that after the virtual machine has started, it takes several minutes until the BIBBOX can be accessed.
 
-#### 3b.) SERVER
 
-If you decided to download the server version of BIBBOX without the GUI, you will need to do some manual configuration in order to use the BIBBOX.
+If you want to access the server from a client, some further configuration is necessary:
 
-1. First of all, you will need to decide for an URL on which to access the BIBBOX. For this, you or your organisation needs to provide a domain of the likes of **bibbox.org** or **replace.by.your.domain**. For this example, we assume the we want to access the BIBBOX server is **replace.by.your.domain**.
-2. If you only have access to the terminal of your server, you can start the BIBBOX virtual machine with `VBoxManage startvm "BIBBOX_VM_NAME" --type headless`. Otherwise just start the machine from the VirtualBox GUI and log in with user **v** and password **vendetta**.
-3. In case you are following this guide from command line, you will need to connect to the virtual machine by running `ssh v@192.168.10.10`, then accept the ECDSA key fingerprint by entering **yes** and providing the passwort for the user **v*, which is set to **vendetta** by default.
-4. Now you need to make some small changes in multiple files. 
+1. First of all, you will need to decide for an URL on which to access the BIBBOX. For this, you or your organisation needs to provide a domain of the likes of **bibbox.org** or **replace.by.your.domain**. 
+2. Login into the VM, either in the GUI or with an ssh, as configured in the VM network connection. 
+3. Make the following changes. 
 
     * In `/etc/bibbox/bibbox.cfg` 
     
-        change the domain by
+        change the domain with
         
             sudo sed -i 's/bibbox.local.domain/replace.by.your.domain/g' *
             
@@ -86,7 +81,7 @@ If you decided to download the server version of BIBBOX without the GUI, you wil
     
             127.0.0.1       eb3kit
             
-        to the first part of your URL, e.g.
+        to the first part of your URL (don't write 'replace', this is just the example)
         
             127.0.0.1       replace
             
@@ -108,8 +103,8 @@ If your hosting provider offers you an administration panel for managing domains
 4. Copy this proxy configuration into the file, change the ServerName, ServerAlias and the port you configured for your virtual machine. You should also change the name of the log files according to your vm name. Then save with **CTRL + O** and **Enter**.
 
         <VirtualHost *:80>
-            ServerName bibbox.your-domain.com
-            ServerAlias *.bibbox.your-domain.com
+            ServerName replace.by.your.domain
+            ServerAlias *.replace.by.your.domain
 
             <Proxy *>
                 Order deny,allow
