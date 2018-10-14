@@ -18,8 +18,8 @@ For production, please calculate the additional resources you will need, dependi
 
 ## Import the image into VirtualBox
 
-If you only have access via command line, you can import the image with the following command:
-```vboxmanage import path/to/bibbox-latest.ova```
+You can import the image with the following command:
+```vboxmanage import path/to/bibbox-......ova```
 
 If you have a user interface on your system (e.g. it's your local PC), follow these steps:
 
@@ -29,11 +29,10 @@ If you have a user interface on your system (e.g. it's your local PC), follow th
 
 ## Start the machine
 
-The BIBBOX demo VM is a ubuntu server with an desktop (Graphical User Interface) for local testing. 
-to be used as is.
+The BIBBOX demo VM is an Ubuntu server with an desktop (Graphical User Interface) for local testing. 
 
-You can log in with username **v** and passwords **vendetta** and start using the BIBBOX by accessing 
-it in a Browser like Firefox at the URL <http://bibbox.local.domain>.
+
+You can log in with username **v** and passwords **vendetta** and start using the BIBBOX in a local browser with the URL <http://bibbox.local.domain>.
 
 Please be aware, that after the virtual machine has started, it takes several minutes until the server can be accessed.
 
