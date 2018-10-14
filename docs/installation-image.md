@@ -29,19 +29,20 @@ If you have a user interface on your system (e.g. it's your local PC), follow th
 
 ## Start the machine
 
-
-If you download the image for local testing, this machine comes with a GUI (Graphical User Interface) and is ready 
+The BIBBOX demo VM is a ubuntu server with an desktop (Graphical User Interface) for local testing. 
 to be used as is.
 
-You can just log in with username **v** and passwords **vendetta** and start using the BIBBOX by accessing 
+You can log in with username **v** and passwords **vendetta** and start using the BIBBOX by accessing 
 it in a Browser like Firefox at the URL <http://bibbox.local.domain>.
 
 Please be aware, that after the virtual machine has started, it takes several minutes until the server can be accessed.
 
-If you want to access the server from a client, some further configuration is necessary:
+If you want to access the server from a client, further configurations are necessary:
 
-1. First of all, you will need to decide for an URL on which to access the BIBBOX. For this, you or your organisation needs to provide a domain of the likes of **bibbox.org** or **replace.by.your.domain**. 
-2. Login into the VM, either in the GUI or with an ssh, as configured in the VM network connection. 
+1. Choose the domain name, the server will be reachable: **replace.by.your.domain**
+
+2. Login into the VM, either in the GUI or with an ssh, as configured in the VM network.
+
 3. Make the following changes. 
 
     * In `/etc/bibbox/bibbox.cfg` 
@@ -63,7 +64,7 @@ If you want to access the server from a client, some further configuration is ne
     
             127.0.0.1       eb3kit
             
-        to the first part of your URL (don't write 'replace', this is just the example)
+        to the first part of your domain name
         
             127.0.0.1       replace
             
