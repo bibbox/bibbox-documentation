@@ -31,7 +31,7 @@ For production, please calculate the additional resources you will need, dependi
 
 ### 1.) Download BIBBOX image
 
-If you want to install the BIBBOX server as a virtual machine download the latest version from  <http://bibbox.bbmri-eric.eu/resources/machine/>
+Download the latest version from  <http://bibbox.bbmri-eric.eu/resources/machine/>
 
 ### 2.) Import the image into VirtualBox
 
