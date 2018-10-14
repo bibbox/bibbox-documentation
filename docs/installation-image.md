@@ -54,7 +54,7 @@ If you download the image for local testing, this machine comes with a GUI (Grap
 to be used as is.
 
 You can just log in with username **v** and passwords **vendetta** and start using the BIBBOX by accessing 
-it in a Browser like Firefox at the URL <http://bibbox.local.domain>. (please note in previous versions username / password was **vmadmin**  / **bibbox4ever**)
+it in a Browser like Firefox at the URL <http://bibbox.local.domain>.
 
 Please be aware, that after the virtual machine has started, it takes several minutes until the BIBBOX can be accessed.
 
@@ -62,50 +62,23 @@ Please be aware, that after the virtual machine has started, it takes several mi
 
 If you decided to download the server version of BIBBOX without the GUI, you will need to do some manual configuration in order to use the BIBBOX.
 
-1. First of all, you will need to decide for an URL on which to access the BIBBOX. For this, you or your organisation needs to provide a domain of the likes of **bibbox.org** or **your-domain.com**. For this example, we assume the domain is name **your-domain.com** and we want to access the BIBBOX at **bibbox.your-domain.com**.
+1. First of all, you will need to decide for an URL on which to access the BIBBOX. For this, you or your organisation needs to provide a domain of the likes of **bibbox.org** or **replace.by.your.domain**. For this example, we assume the we want to access the BIBBOX server is **replace.by.your.domain**.
 2. If you only have access to the terminal of your server, you can start the BIBBOX virtual machine with `VBoxManage startvm "BIBBOX_VM_NAME" --type headless`. Otherwise just start the machine from the VirtualBox GUI and log in with user **v** and password **vendetta**.
-3. In case you are following this guide from command line, you will need to connect to the virtual machine by running `ssh vmadmin@192.168.10.10`, then accept the ECDSA key fingerprint by entering **yes** and providing the passwort for the user **v*, which is set to **vendetta** by default.
-4. Now you need to make some small changes in multiple files. Please open the following files one by one with `sudo nano path/to/file`, change the URL **eb3kit.bibbox.org** to your URL (e.g. **bibbox.your-domain.com**) and save the files with **CTRL + O** and **ENTER**. You can exit the editor with **CTRL + X**.:
+3. In case you are following this guide from command line, you will need to connect to the virtual machine by running `ssh v@192.168.10.10`, then accept the ECDSA key fingerprint by entering **yes** and providing the passwort for the user **v*, which is set to **vendetta** by default.
+4. Now you need to make some small changes in multiple files. 
 
-    * In `/etc/bibbox/bibbox.cfg`
+    * In `/etc/bibbox/bibbox.cfg` 
     
-        change
-    
-            bibboxbaseurl="eb3kit.bibbox.org"
-            
-        to
+        change the domain by
         
-            bibboxbaseurl="bibbox.your-domain.com"
+            sudo sed -i 's/bibbox.local.domain/replace.by.your.domain/g' *
             
-    * In `/etc/apache2/sites-available/000-default.conf`
-    
-        change
-    
-            ServerName error.eb3kit.bibbox.org
             
-        to
-        
-            ServerName error.bibbox.your-domain.com
-            
-    * In `/etc/apache2/sites-available/001-default-application-store.conf`
+    * In `/etc/apache2/sites-available`
     
-        change
+        change the domain names in the proxy files with  
     
-            ServerName eb3kit.bibbox.org
-            
-        to
-        
-            ServerName bibbox.your-domain.com
-            
-    * In `/etc/apache2/sites-available/050-liferay.conf`
-    
-        change
-    
-            ServerName eb3kit.bibbox.org
-            
-        to
-        
-            ServerName bibbox.your-domain.com
+            sudo sed -i 's/bibbox.local.domain/replace.by.your.domain/g' *
             
     * And in `/etc/hosts`
     
@@ -115,9 +88,16 @@ If you decided to download the server version of BIBBOX without the GUI, you wil
             
         to the first part of your URL, e.g.
         
-            127.0.0.1       bibbox
+            127.0.0.1       replace
             
-5. Finally run `sudo service apache2 reload` to make the changes take effect.
+5. Finally run to make the changes take effect
+
+        `sudo service apache2 stop` 
+        `sudo service apache2 start` 
+        `sudo service liferay stop` 
+        `sudo service liferay start` 
+        
+    
 
 #### 4.) Network configuration
 
@@ -154,6 +134,6 @@ If your hosting provider offers you an administration panel for managing domains
 
 5. Now navigate to the **/etc/apache2/sites-enabled** directory and create a symbolic link to your new proxy file with `ln -s ../sites-available/005-bibbox.conf`. 
 6. Next reload Apache to make it recognize your changes by running `service apache2 reload`.
-7. You can now access the BIBBOX from anywhere in the web by calling your URL (e.g. **bibbox.your-domain.com**) in the browser's address bar!
+7. You can now access the BIBBOX from anywhere in the web by calling your URL (e.g. **replace.by.your.domain**) in the browser's address bar!
 
 ![alt text](images/installation/bibbox.jpg "Welcome to BIBBOX")
