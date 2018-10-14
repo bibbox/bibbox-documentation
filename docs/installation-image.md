@@ -1,18 +1,6 @@
 # Requirements
 
-### Hardware
-
-**Minimum**
-
-The following will show you the minimum requirements of the BIBBOX virtual machine. Please note, that installing any applications within BIBBOX will require additional resources!
-
-* CPU cores: 1
-* Memory: 4096 MB
-* Disk space: 20 GB
-
-**Recommended for Development**
-
-For development purposes we recommend a virtual machine with the following specifications:
+For testing purposes we recommend a virtual machine with the following specifications:
 
 * CPU cores: 4
 * Memory: 8192 MB
@@ -23,17 +11,12 @@ For development purposes we recommend a virtual machine with the following speci
 For production, please calculate the additional resources you will need, depending on the applications you are going to install within the BIBBOX.
 
 
-### Software
+# Installation
 
 * Download and install VirtualBox -> <https://www.virtualbox.org>
+* Download the latest BIBBOX version from  <http://bibbox.bbmri-eric.eu/resources/machine/>
 
-# Installation instructions
-
-### 1.) Download BIBBOX image
-
-Download the latest version from  <http://bibbox.bbmri-eric.eu/resources/machine/>
-
-### 2.) Import the image into VirtualBox
+## Import the image into VirtualBox
 
 If you only have access via command line, you can import the image with the following command:
 ```vboxmanage import path/to/bibbox-latest.ova```
@@ -44,7 +27,7 @@ If you have a user interface on your system (e.g. it's your local PC), follow th
 * CLick on **File > Import Appliance...**
 * Select the downloaded image and click **Continue**
 
-### 3.) Start the machine
+## Start the machine
 
 
 If you download the image for local testing, this machine comes with a GUI (Graphical User Interface) and is ready 
@@ -53,8 +36,7 @@ to be used as is.
 You can just log in with username **v** and passwords **vendetta** and start using the BIBBOX by accessing 
 it in a Browser like Firefox at the URL <http://bibbox.local.domain>.
 
-Please be aware, that after the virtual machine has started, it takes several minutes until the BIBBOX can be accessed.
-
+Please be aware, that after the virtual machine has started, it takes several minutes until the server can be accessed.
 
 If you want to access the server from a client, some further configuration is necessary:
 
@@ -94,7 +76,7 @@ If you want to access the server from a client, some further configuration is ne
         
     
 
-#### 4.) Network configuration
+## Network configuration
 
 If your hosting provider offers you an administration panel for managing domains and subdomains, you should use that to point to your BIBBOX. Otherwise, if you use Apache, you can do it yourself using this guide:
 
@@ -130,5 +112,36 @@ If your hosting provider offers you an administration panel for managing domains
 5. Now navigate to the **/etc/apache2/sites-enabled** directory and create a symbolic link to your new proxy file with `ln -s ../sites-available/005-bibbox.conf`. 
 6. Next reload Apache to make it recognize your changes by running `service apache2 reload`.
 7. You can now access the BIBBOX from anywhere in the web by calling your URL (e.g. **replace.by.your.domain**) in the browser's address bar!
+
+## Domain Migration
+
+If you want to migrate from **SOME.OLD.DOMAIN** to **YOUR.NEW.DOMAIN**, login into your VM and make the following steps 
+
+* Stop the apache service
+
+`sudo service apache2 stop`
+
+* Replace all **SOME.OLD.DOMAIN** in the proxy files
+
+`cd /etc/apache2?`
+
+`sudo cp -r sites-available sites-available-back`
+
+`cd sites-available`
+
+`sed -i 's/SOME.OLD.DOMAIN/YOUR.NEW.DOMAIN/g' *`
+
+`sudo service apache2 start`
+
+* Change to config for the portal
+
+`cd /etc/bibbox`
+
+`sudo service liferay stop`
+
+`sudo sed -i 's/SOME.OLD.DOMAIN/YOUR.NEW.DOMAIN/g' bibbox.cfg`
+
+`sudo service liferay start`
+
 
 ![alt text](images/installation/bibbox.jpg "Welcome to BIBBOX")
