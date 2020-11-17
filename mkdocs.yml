@@ -10,5 +10,6 @@ pages:
         - OpenSpecimen: apptutorials/openspecimen/openspecimen.md
         - Phenotips: apptutorials/phenotips/phenotips.md
     - Under the hood: technical.md
+    - V4 - Beta: V4-documentation.md
 
 theme: readthedocs
