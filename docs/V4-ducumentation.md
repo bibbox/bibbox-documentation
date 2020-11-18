@@ -92,5 +92,5 @@ A started app with a user defined instance name (instanceName) can be used under
 
 # Requirements
 
-To install the bibbox locally we recommend 
+To install the Bibbox locally we recommend to use Linux or MacOS as operating system.
 
