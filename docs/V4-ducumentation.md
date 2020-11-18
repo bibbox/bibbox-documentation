@@ -4,7 +4,7 @@ This documentation describes the new Version of the Bibbox.
 
 ## Initial Setup, Linux
 
-To install the and use the bibbox software please follow these instructions:
+To install and use the bibbox software please follow these instructions:
 
 ##### Install Docker Engine
 
@@ -16,7 +16,7 @@ Run the following commands:
 
 ##### Install Docker Compose
 
-To install the newest docker-compose package follow the insall dokumentation on the official docker website.
+To install the newest docker-compose package follow the install dokumentation on the official docker website.
 
 https://docs.docker.com/compose/install/
 
@@ -43,7 +43,6 @@ To source the functions automatically every time you open the shell you can add 
 `source /opt/bibbox/sys-bibbox/CLIFunctions.sh`
 
 at the end of the file `~/.bashrc` in the home directory of the current user.
-
 
 
 ## Use the BIBBOX via CLI
@@ -80,6 +79,8 @@ The available commands are:
 
 `bibbox restartSystem`
 
+`bibbox checkSystem`
+
 
 Use the flag -h or --help for a detailed app description.
 
@@ -91,9 +92,5 @@ A started app with a user defined instance name (instanceName) can be used under
 
 # Requirements
 
-For testing purposes we recommend a virtual machine with the following specifications:
-
-* CPU cores: 4
-* Memory: 8192 MB
-* Disk space: 100 GB
+To install the bibbox locally we recommend 
 
