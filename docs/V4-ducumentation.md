@@ -104,7 +104,7 @@ A started app with a user defined instance name (instanceName) can be used under
 
 DESCRIPTION
 
-    Installs a new Bibbox app with a specific unique name
+    Installs a new Bibbox app with a specific unique name. before installation, the available versions and the required user parameter can are accessible via the command `bibbox info`.
 
 SYNTAX
 
