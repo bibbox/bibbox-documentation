@@ -98,6 +98,62 @@ Use the flag -h or --help for a detailed app description.
 
 A started app with a user defined instance name (instanceName) can be used under "localhost:8010/instanceName" in the browser.
 
+# CLI Function Documentation
+
+`bibbox install`
+
+DESCRIPTION
+Installs a new Bibbox app with a specific unique name
+SYNTAX
+bibbox install <appname> -n <instancename> -v <version> -p <paarameters>
+OPTIONS
+-h, --help                    Funcion help
+-bv, --bibboxversion          Print script information
+-n, --name                    Specify the name of the installed instance. The instance name can also be set without flag as the second function argument.
+-v, --version                 Specify the app version you want to install. This flag is optional. If not specified, the newest version gets installed.
+-p, --params                  The app parameters can be passed to this function automatically. This flag is optional. If not specified, the app parameters can be set to default or set interactively.
+-d, --default                 If this flag is set, the default app parameters are used for installation.
+EXAMPLES
+bibbox install nextcloud -n mynextcloud -v v20-0-x_tng -p 'nextcloud,nextcloud'
+bibbox install nextcloud -n mynextcloud -d
+bibbox install nextcloud mynextcloud
+
+`bibbox start`
+
+DESCRIPTION
+Starts the wanted Bibbox app container
+SYNTAX
+bibbox start <instancename>
+OPTIONS
+-h, --help                    Function help
+-v, --version                 Print script information
+EXAMPLES
+bibbox start seeddmstest
+
+`bibbox stop`
+
+`bibbox restart`
+
+`bibbox copy`
+
+`bibbox listApps`
+
+`bibbox listInstances`
+
+`bibbox remove`
+
+`bibbox status`
+
+`bibbox startSystem`
+
+`bibbox stopSystem`
+
+`bibbox restartSystem`
+
+`bibbox checkSystem`
+
+`bibbox info`
+
 
 # Requirements
 
