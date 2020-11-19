@@ -90,6 +90,8 @@ The available commands are:
 
 `bibbox checkSystem`
 
+`bibbox info`
+
 
 Use the flag -h or --help for a detailed app description.
 
