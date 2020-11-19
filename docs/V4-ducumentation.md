@@ -151,32 +151,255 @@ OPTIONS
 
 EXAMPLES
 
-    bibbox start seeddmstest
+    bibbox start myseeddms
 
-`bibbox stop`
+## bibbox stop
 
-`bibbox restart`
+DESCRIPTION
 
-`bibbox copy`
+    Stops the wanted Bibbox app container
 
-`bibbox listApps`
+SYNTAX
 
-`bibbox listInstances`
+    bibbox stop <instancename>
+  
+OPTIONS
 
-`bibbox remove`
+    -h, --help                    Function help
 
-`bibbox status`
+    -v, --version                 Print script information
 
-`bibbox startSystem`
+EXAMPLES
 
-`bibbox stopSystem`
+    bibbox stop myseeddms
+    
+## bibbox restart
 
-`bibbox restartSystem`
+DESCRIPTION
 
-`bibbox checkSystem`
+    Restarts the wanted Bibbox app container
 
-`bibbox info`
+SYNTAX
 
+    bibbox restart <instancename>
+  
+OPTIONS
+
+    -h, --help                    Function help
+
+    -v, --version                 Print script information
+
+EXAMPLES
+
+    bibbox restart myseeddms
+    
+    
+## bibbox copy
+
+DESCRIPTION
+
+    Copies the wanted Bibbox app container
+
+SYNTAX
+
+    bibbox copy <instancename>
+  
+OPTIONS
+
+    -h, --help                    Function help
+
+    -v, --version                 Print script information
+
+EXAMPLES
+
+    bibbox copy myseeddms
+    
+
+## bibbox listApps
+
+DESCRIPTION
+
+    Lists all available applications
+    
+SYNTAX
+
+    bibbox listApps
+  
+OPTIONS
+
+    -h, --help                    Function help
+
+    -v, --version                 Print script information
+
+EXAMPLES
+
+    bibbox listApps
+
+
+## bibbox listInstances
+
+DESCRIPTION
+
+    Lists all installed applications
+    
+SYNTAX
+
+    bibbox listInstances
+  
+OPTIONS
+
+    -h, --help                    Function help
+
+    -v, --version                 Print script information
+
+EXAMPLES
+
+    bibbox listInstances
+    
+    
+## bibbox remove
+
+DESCRIPTION
+
+    Removes the wanted Bibbox app container
+
+SYNTAX
+
+    bibbox remove <instancename>
+  
+OPTIONS
+
+    -h, --help                    Function help
+
+    -v, --version                 Print script information
+
+EXAMPLES
+
+    bibbox remove myseeddms
+    
+    
+## bibbox status
+
+DESCRIPTION
+
+    Lists the status of a specific app
+    
+SYNTAX
+
+    bibbox status
+  
+OPTIONS
+
+    -h, --help                    Function help
+
+    -v, --version                 Print script information
+
+EXAMPLES
+
+    bibbox status
+    
+    
+## bibbox startSystem
+
+DESCRIPTION
+
+    Starts the Bibbox system
+    
+SYNTAX
+
+    bibbox startSystem
+  
+OPTIONS
+
+    -h, --help                    Function help
+
+    -v, --version                 Print script information
+
+EXAMPLES
+
+    bibbox startSystem
+
+## bibbox stopSystem
+
+DESCRIPTION
+
+    Stops the Bibbox system
+    
+SYNTAX
+
+    bibbox stopSystem
+  
+OPTIONS
+
+    -h, --help                    Function help
+
+    -v, --version                 Print script information
+
+EXAMPLES
+
+    bibbox stopSystem
+ 
+
+## bibbox restartSystem
+
+DESCRIPTION
+
+    Restarts the Bibbox system
+    
+SYNTAX
+
+    bibbox restartSystem
+  
+OPTIONS
+
+    -h, --help                    Function help
+
+    -v, --version                 Print script information
+
+EXAMPLES
+
+    bibbox restartSystem
+    
+## bibbox checkSystem
+
+DESCRIPTION
+
+    Checks the Bibbox system id all required services are running correctly and if the required packages are installed in the required versions.
+    
+SYNTAX
+
+    bibbox checkSystem
+  
+OPTIONS
+
+    -h, --help                    Function help
+
+    -v, --version                 Print script information
+
+EXAMPLES
+
+    bibbox checkSystem
+    
+    
+## bibbox info
+
+DESCRIPTION
+
+    Returns install information about a specific application. This information contains the available versions, the input parameters etc.    
+    
+SYNTAX
+
+    bibbox info <appname>
+  
+OPTIONS
+
+    -h, --help                    Function help
+
+    -v, --version                 Print script information
+
+EXAMPLES
+
+    bibbox info seeddms
 
 # Requirements
 
