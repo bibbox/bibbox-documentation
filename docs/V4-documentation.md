@@ -617,7 +617,7 @@ otherwise the tagging of the bibbox docker/hub and bibbox github will get confus
 
 1. Generate a new branch in github, if you plan to release a major version. 
 
-2. Update all the files for the anticipated version, don't forgett to update *appinfo.json*. 
+2. Update all the files for the anticipated version, don't forget to update *appinfo.json*. 
 
 3. Set in the docker compose template file (docker-compose-template.yml) 
 the tags for the docker images. Please not, that ALL used images should be tagged with an specific version, don't use the 'latest" tag, as this could break your APP in the future. 
