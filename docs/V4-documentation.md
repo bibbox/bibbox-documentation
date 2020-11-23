@@ -21,14 +21,13 @@ Run the following commands:
 To install the newest docker-engine package follow the install dokumentation on the official docker website. 
 The docker engine for MacOS comes with docker desktop.
 
-@ [https://docs.docker.com/docker-for-mac/install/](https://docs.docker.com/docker-for-mac/install/).
+[https://docs.docker.com/docker-for-mac/install/](https://docs.docker.com/docker-for-mac/install/).
 
 ##### Install Docker Compose
 
 To install the newest docker-compose package follow the install dokumentation on the official docker website.
 
-@ [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/).
-
+[https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/).
 
 ##### Install the BIBBOX
 
