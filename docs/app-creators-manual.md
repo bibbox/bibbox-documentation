@@ -155,8 +155,41 @@ An **App** consists at least of the following files and directories, please neve
 
     ]
 ```
+  
+* fileinfo.json
 
-* configuration-parameters.json
+    A list of commands to be run when installing an app, consisting of three categories: "environmental_replace", "script_replace" and "permissions".
+    | environmental_replace | WIP - specifies files/directories where placeholders can be replaced easily |
+    |---|---|
+    | script_replace | WIP - specifies files/directories where placeholders etc. should be replaced by a script |
+    | permissions | specifies which files/folders in the instance directory should be set to which permissions |    
+    
+    Tool for calculating permissions: https://chmod-calculator.com/
+
+structure:
+``` json
+    {
+        "environment_replace": {},
+        "script_replace": [],
+        "permissions": {
+            "PATH": NUMERIC_VALUE_OF_PERMISSION
+	    }
+    }
+```
+
+example:
+``` json
+    {
+        "environment_replace": {},
+        "script_replace": [],
+        "permissions": {
+            "assets": 775
+	    }
+    }
+```
+    
+
+* configuration-parameters.json (not yet implemented)
 
     Configuration parameters for the docker-compose-template file. The user can set the values for these parameters in a GUI during the installation of an App and also in an later interactive configuration panel (will be provided in the next release). 
     
@@ -185,7 +218,7 @@ An **App** consists at least of the following files and directories, please neve
     
 ```
 
-* filestructure.json
+* filestructure.json (deprecated)
 
     Specifies a list of directories to be created in the App instance folder, and a list of files to be copied from the App repository to the App instance folder. All files listed here are copied by default to the App instance folder.
     
@@ -215,7 +248,7 @@ An **App** consists at least of the following files and directories, please neve
     Icon of the App in the application store und in the application dashboard. Please use a square format, e.g. 512x512 pixeland PNG with a transparency channel.
     
   
-* sys-info.json
+* sys-info.json (deprecated)
 
     A list of containers, that must run in order display the container as "running" in the application dashboard. In addtion a list of "non running" containers can be specified. The names must be the same as the service names in the docker-compose-template.yml. 
 
@@ -228,7 +261,7 @@ An **App** consists at least of the following files and directories, please neve
 ```
     
 
-* portinfo.json
+* portinfo.json (deprecated, moved to docker-compose.yml.template)
 
     Defines the mapping of ports as given in the docker-compose-template.yml to an URL. To achieve this proxy files are generated an the apache server of a BIBBOX instance is reloaded, when an App is installed. If your BIBBOX base URL is `apps.mybiobank.com` the installation of an APP with the instance ID `lims` generates two proxy files, which maps
     
