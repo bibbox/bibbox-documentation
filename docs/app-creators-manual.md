@@ -159,8 +159,9 @@ An **App** consists at least of the following files and directories, please neve
 * fileinfo.json
 
     A list of commands to be run when installing an app, consisting of three categories: "environmental_replace", "script_replace" and "permissions".
-    | environmental_replace | WIP - specifies files/directories where placeholders can be replaced easily |
+    | key | description |
     |---|---|
+    | environmental_replace | WIP - specifies files/directories where placeholders can be replaced easily |
     | script_replace | WIP - specifies files/directories where placeholders etc. should be replaced by a script |
     | permissions | specifies which files/folders in the instance directory should be set to which permissions |    
     
