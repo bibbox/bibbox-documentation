@@ -163,7 +163,7 @@ An **App** consists at least of the following files and directories, please neve
     |---|---|
     | environmental_replace | WIP - specifies files/directories where placeholders can be replaced easily |
     | script_replace | WIP - specifies files/directories where placeholders etc. should be replaced by a script |
-    | permissions | specifies which files/folders in the instance directory should be set to which permissions |    
+    | permissions | specifies which files/folders in the instance directory should be set to which permissions. \n the path is always relative to the instance directory|    
     
     Tool for calculating permissions: https://chmod-calculator.com/
 
@@ -173,7 +173,9 @@ structure:
         "environment_replace": {},
         "script_replace": [],
         "permissions": {
-            "PATH": NUMERIC_VALUE_OF_PERMISSION
+            "PATH1": NUMERIC_VALUE_OF_PERMISSION1,
+	    "PATH2": NUMERIC_VALUE_OF_PERMISSION2,
+	    "PATH3": NUMERIC_VALUE_OF_PERMISSION3
 	    }
     }
 ```
@@ -184,7 +186,8 @@ example:
         "environment_replace": {},
         "script_replace": [],
         "permissions": {
-            "assets": 775
+            "assets": 775,
+	    "util/shared" : 777
 	    }
     }
 ```
