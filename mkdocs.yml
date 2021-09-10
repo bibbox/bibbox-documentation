@@ -9,7 +9,9 @@ pages:
     - Intstall Apps:
         - OpenSpecimen: apptutorials/openspecimen/openspecimen.md
         - Phenotips: apptutorials/phenotips/phenotips.md
+        - Molgenis: apptutorials/molgenis/molgenis.md
     - Under the hood: technical.md
     - V4 - Beta: V4-documentation.md
+        - Create Apps: app-creators-manual_v4.md
 
 theme: readthedocs
