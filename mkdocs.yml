@@ -12,6 +12,6 @@ pages:
         - Molgenis: apptutorials/molgenis/molgenis.md
     - Under the hood: technical.md
     - V4 - Beta: V4-documentation.md
-    - Create Apps - V4: app-creators-manual_v4.md
+    - V4 - Create Apps: app-creators-manual_v4.md
 
 theme: readthedocs
