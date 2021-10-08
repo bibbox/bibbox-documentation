@@ -12,31 +12,31 @@ A template repository can be found at:  <https://github.com/bibbox/app-template>
 
 An **App** consists at least of the following files and directories, please never change the name of these files!
 
-* README.md
-* INSTALL-APP.md
-* appinfo.json
-* README.md
-* docker-compose.yml.template
-* environment-parameters.json
-* fileinfo.json
-* icon.png
-* images
+- README.md
+- INSTALL-APP.md
+- appinfo.json
+- README.md
+- docker-compose.yml.template
+- environment-parameters.json
+- fileinfo.json
+- icon.png
+- images
 
 ### README.md
 
-    The default Github readme file shoud contain information about the used official docker images and docker images from the [BIBBOX dockerhub](https://hub.docker.com/r/bibbox/). In addition you should describe all mounted volumes and their content.            
+The default Github readme file shoud contain information about the used official docker images and docker images from the [BIBBOX dockerhub](https://hub.docker.com/r/bibbox/). In addition you should describe all mounted volumes and their content.
 
   
 ### INSTALL-APP.md
 
-    Install instruction for the APP to follow after the first installation step (docker-compose up) is finished. This typicaly describes application specific configuration tasks. A link to this file is given in the Dashboard of the installed App. 
+Install instruction for the APP to follow after the first installation step (docker-compose up) is finished. This typicaly describes application specific configuration tasks. A link to this file is given in the Dashboard of the installed App. 
     
   
 ### appinfo.json
     
-    Specifies Information about the App as displayed in the BIBBOX App Store. 
+Specifies Information about the App as displayed in the BIBBOX App Store. 
     
-``` code
+``` json
     {
             "name": "A long name of the Application, shown in the App Store",
             "short_name": "APP short name",
@@ -51,9 +51,9 @@ An **App** consists at least of the following files and directories, please neve
 
 ### docker-compose.yml.template
 
-    Based on this file the docker-compose.yml will be generated. The variables §§INSTANCE and all other environment and configuration variables starting with "§§" will be replaced during the installation. Each template for a docker compose file should link to the `bibbox-default-network` network. The `proxy` and `ports` section is used to create a `005-§§INSTANCE.conf` proxy file. 
+Based on this file the docker-compose.yml will be generated. The variables §§INSTANCE and all other environment and configuration variables starting with "§§" will be replaced during the installation. Each template for a docker compose file should link to the `bibbox-default-network` network. The `proxy` and `ports` section is used to create a `005-§§INSTANCE.conf` proxy file. 
     
-``` 
+``` yml
     version: '3'
     
     networks:
@@ -117,7 +117,7 @@ An **App** consists at least of the following files and directories, please neve
 
 ### environment-parameters.json
 
-    Environment parameters for the docker-compose-template file. The user can set the values for these parameters in a GUI during the installation of an App. 
+Environment parameters for the docker-compose-template file. The user can set the values for these parameters in a GUI during the installation of an App. 
    
     
 ```json
@@ -164,14 +164,14 @@ An **App** consists at least of the following files and directories, please neve
   
 ### fileinfo.json
 
-    A list of commands to be run when installing an app, consisting of three categories: "environmental_replace", "script_replace" and "permissions".
-    | key | description |
-    |---|---|
-    | environmental_replace | WIP - specifies files/directories where placeholders can be replaced easily |
-    | script_replace | WIP - specifies files/directories where placeholders etc. should be replaced by a script |
-    | permissions | specifies which files/folders in the instance directory should be set to which permissions. \n the path is always relative to the instance directory|    
-    
-    Tool for calculating permissions: https://chmod-calculator.com/
+A list of commands to be run when installing an app, consisting of three categories: "environmental_replace", "script_replace" and "permissions".
+| key | description |
+|---|---|
+| environmental_replace | WIP - specifies files/directories where placeholders can be replaced easily |
+| script_replace | WIP - specifies files/directories where placeholders etc. should be replaced by a script |
+| permissions | specifies which files/folders in the instance directory should be set to which permissions. \n the path is always relative to the instance directory|    
+
+Tool for calculating permissions: https://chmod-calculator.com/
 
 structure:
 ``` json
@@ -201,7 +201,7 @@ example:
 
 ### icon.png
 
-    Icon of the App in the application store und in the application dashboard. Please use a square format, e.g. 512x512 pixeland PNG with a transparency channel.
+Icon of the App in the application store und in the application dashboard. Please use a square format, e.g. 512x512 pixeland PNG with a transparency channel.
     
 ### images
 
@@ -212,9 +212,9 @@ Directory containing all docker images used in the docker-compose.yml.template (
 
 Each App should be versioned. We distinguish between
 
-* **Development Version** generated from the master branch of the repository. The developmemt version is identified by the tag `development` in the kit description. 
+- **Development Version** generated from the master branch of the repository. The developmemt version is identified by the tag `development` in the kit description. 
 
-* **Production Versions** generated from a specific release in the repository. For each major release. i.e. given by a new version of dockerized software tool, a new branch should be generated in the repository. Please note, that the tag name for the Github release should contain the APP version and the BIBBOX APP release (adaption of the APP for BIBBOX). The proposed format is v*APP_verion*_bibboxrel*3 digit bibbox_release_number* e.g. `v8.7.2_bibboxrel001`. 
+- **Production Versions** generated from a specific release in the repository. For each major release. i.e. given by a new version of dockerized software tool, a new branch should be generated in the repository. Please note, that the tag name for the Github release should contain the APP version and the BIBBOX APP release (adaption of the APP for BIBBOX). The proposed format is v*APP_verion*_bibboxrel*3 digit bibbox_release_number* e.g. `v8.7.2_bibboxrel001`. 
 
 
 ![GitHub_BiBBox_versioning](images/v4/GitHub_BiBBox_Versioning.png "GitHub Workflow Versioning")
@@ -240,9 +240,9 @@ the tags for the docker images. Please note, that ALL used images should be tagg
 
 For the registration of an App two configuration files have to be extended:
 
-* [applications.json](https://github.com/bibbox/application-store/blob/master/applications.json) maps a Github repository to a human readable name of the App 
+- [applications.json](https://github.com/bibbox/application-store/blob/master/applications.json) maps a Github repository to a human readable name of the App 
 
 
-* [bibbox.json](https://github.com/bibbox/application-store/blob/master/bibbox.json) puts the App into a specific **kit**. A **kit** defines ta group of Apps together with metadata, which are then displayed in the App store and can be installed in a BIBBOX instance. 
+- [bibbox.json](https://github.com/bibbox/application-store/blob/master/bibbox.json) puts the App into a specific **kit**. A **kit** defines ta group of Apps together with metadata, which are then displayed in the App store and can be installed in a BIBBOX instance. 
 
 
