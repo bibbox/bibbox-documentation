@@ -20,7 +20,6 @@ An **App** consists at least of the following files and directories, please neve
 - environment-parameters.json
 - fileinfo.json
 - icon.png
-- images
 
 ### README.md
 
@@ -52,6 +51,11 @@ Specifies Information about the App as displayed in the BIBBOX App Store.
 ### docker-compose.yml.template
 
 Based on this file the docker-compose.yml will be generated. The variables §§INSTANCE and all other environment and configuration variables starting with "§§" will be replaced during the installation. Each template for a docker compose file should link to the `bibbox-default-network` network. The `proxy` and `ports` section is used to create a `005-§§INSTANCE.conf` proxy file. 
+
+NOTE:
+- Only use tagged images versions (not latest). To ensure that the app stays stable over time.
+- Use the docker-compose `links` parameter to ensure that containers can "talk" to each other indent of the name set in §§INSTANCE.
+
     
 ``` yml
     version: '3'
@@ -63,7 +67,7 @@ Based on this file the docker-compose.yml will be generated. The variables §§I
     services:
     
       §§INSTANCE-container-frontend:
-        image: bibbox/app-image
+        image: bibbox/app-image:vx.y.z
         container_name:  §§INSTANCE-container-frontend
         restart: unless-stopped
         networks:
@@ -83,7 +87,7 @@ Based on this file the docker-compose.yml will be generated. The variables §§I
           DISPLAYNAME: 'APP name'  
 
     §§INSTANCE-container2:
-      image: bibbox/app-image2
+      image: bibbox/app-image2:va.b.c
       container_name:  §§INSTANCE-container2
       restart: unless-stopped
       networks:
@@ -203,10 +207,6 @@ example:
 
 Icon of the App in the application store und in the application dashboard. Please use a square format, e.g. 512x512 pixeland PNG with a transparency channel.
     
-### images
-
-Directory containing all docker images used in the docker-compose.yml.template (apart from offcial docker images). For each docker image a sub directory containing the Dockerfile and configs has the created. In the BIBBOX dockerhub these files are used to build the docker images. Please note, that for versioned Apps both in the dockerhub and in the docker-compose.yml.template version tags has to be used. 
-
 
 ## Versioning
 
@@ -224,13 +224,17 @@ When creating a production version, you should make the follwoing steps. Please 
 otherwise the tagging of the bibbox docker/hub and bibbox github will get confused.
 
 1. Generate a new branch in github, if you plan to release a major version. 
-
+  
+	1. Once a stable bibbox release is ready create a tag in compliance with the naming convention (e.g. `v8.7.2_bibboxrel001`). 
+  
+	2. The latest app version should be merged in the master branch if a stable BIBBOX release exists via a pull request. 
+  
 2. Update all the files for the anticipated version, don't forget to update *appinfo.json*. 
 
 3. Set in the docker compose template file (docker-compose.yml.template) 
 the tags for the docker images. Please note, that ALL used images should be tagged with an specific version, don't use the 'latest" tag, as this could break your APP in the future. 
 
-4. Add the tag in the DOCKER hub to build tagged images (press SAVE before TRIGGER)
+4. *Add the tag in the DOCKER hub to build tagged images (press SAVE before TRIGGER)*
 
 5. Edit in the used kit, e.g. *bibbox.json* the version information. This file can be found in the *application-store* repository. 
 
