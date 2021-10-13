@@ -15,7 +15,6 @@ An **App** consists at least of the following files and directories, please neve
 - README.md
 - INSTALL-APP.md
 - appinfo.json
-- README.md
 - docker-compose.yml.template
 - environment-parameters.json
 - fileinfo.json
