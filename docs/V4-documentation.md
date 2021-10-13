@@ -51,9 +51,9 @@ When asked to: <br>
 Specify domainname + TLD (e.g. silicolabv4.bibbox.org):  <br>
 you either: 
 
-*Have to enter an existing domain forwarding requests towards this Machine (and forward all Suburls aka: add  ServerAlias \*.your.domain.com to your Host config)
-*Add the URL you want to use locally to your /etc/hosts file (see [https://linuxize.com/post/how-to-edit-your-hosts-file/](edit Hosts file))
-*Set up an Webserver (Apache or Nginx) to forward your requests towards the internal Proxy-Server operated by the bibbox
+* Have to enter an existing domain forwarding requests towards this Machine (and forward all Suburls aka: add  ServerAlias \*.your.domain.com to your Host config)
+* Add the URL you want to use locally to your /etc/hosts file (see [https://linuxize.com/post/how-to-edit-your-hosts-file/](edit Hosts file))
+* Set up an Webserver (Apache or Nginx) to forward your requests towards the internal Proxy-Server operated by the bibbox
 
 As you may noted is is necccesary to forward all suburls towards the url you chose as well. This is neccesary since once you install an app it will be given an specific suburl or range of suburls where its Front-End will be reachable.
 
