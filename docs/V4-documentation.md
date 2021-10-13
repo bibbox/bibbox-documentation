@@ -23,7 +23,7 @@ Run the following commands:
 
 To install the newest docker-engine package follow the install dokumentation on the official docker website. 
 
-[https://docs.docker.com/engine/install/](Docker Engine install instructions).
+[https://docs.docker.com/engine/install/](https://docs.docker.com/engine/install/).
 
 ##### Install Docker Compose
 
@@ -64,7 +64,7 @@ TODO !
 ##### Installing apps
 
 Once you did the above steps correctly you should be able to connect to your local Bibbox installation via the URL you chose.
-You should see [http://silicolabv4.bibbox.org/](Bibbox Example).
+You should see [http://silicolabv4.bibbox.org/](http://silicolabv4.bibbox.org/).
 
 
 
