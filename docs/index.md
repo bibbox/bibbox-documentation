@@ -74,13 +74,14 @@ First of all lets backup the default condifuration file dnsmasq creates.<br>
 `sudo cp /etc/dnsmasq.conf /etc/dnsmasq.conf.orig`<br>
 Next we have to create a config file for dnsmasq:<br>
 `sudo nano /etc/dnsmasq.conf`<br>
-If you for example choose bibbox.local.test as the domainname the contents of this file will look like:<br>
+If you for example choose bibbox.local.test as the domainname the contents of this file will look like:
+
 ```
-listen-address=127.0.0.1<br>
-expand-hosts<br>
-domain=bibbox.local.test<br>
-server=8.8.8.8<br>
-server=8.8.4.4<br>
+listen-address=127.0.0.1
+expand-hosts
+domain=bibbox.local.test
+server=8.8.8.8
+server=8.8.4.4
 address=/bibbox.local.test/127.0.0.1
 ```
 
@@ -94,32 +95,33 @@ To test if everything is fine you can type `dnsmasq --test` whic will tell you: 
 Next in order to make the computer use the created DNS-Server we need to set the namespace to the IP-Adress we provided in `listen-address` to achieve this we can edit the `/etc/resolv.conf` file.<br>
 For example this could look like:
 ```
-\# This file is managed by man:systemd-resolved(8). Do not edit.<br>
-\#<br>
-\# This is a dynamic resolv.conf file for connecting local clients to the<br>
-\# internal DNS stub resolver of systemd-resolved. This file lists all<br>
-\# configured search domains.<br>
-\#<br>
-\# Run "resolvectl status" to see details about the uplink DNS servers<br>
-\# currently in use.<br>
-\#<br>
-\# Third party programs must not access this file directly, but only through the<br>
-\# symlink at /etc/resolv.conf. To manage man:resolv.conf(5) in a different way,<br>
-\# replace this symlink by a static file or a different symlink.<br>
+\# This file is managed by man:systemd-resolved(8). Do not edit.
 \#
-\# See man:systemd-resolved.service(8) for details about the supported modes of<br>
-\# operation for /etc/resolv.conf.<br>
+\# This is a dynamic resolv.conf file for connecting local clients to the
+\# internal DNS stub resolver of systemd-resolved. This file lists all
+\# configured search domains.
+\#
+\# Run "resolvectl status" to see details about the uplink DNS servers
+\# currently in use.
+\#
+\# Third party programs must not access this file directly, but only through the
+\# symlink at /etc/resolv.conf. To manage man:resolv.conf(5) in a different way,
+\# replace this symlink by a static file or a different symlink.
+\#
+\# See man:systemd-resolved.service(8) for details about the supported modes of
+\# operation for /etc/resolv.conf.
 
-\# nameserver 127.0.0.53<br>
-nameserver 127.0.0.1<br>
-options edns0 trust-ad<br>
+\# nameserver 127.0.0.53
+nameserver 127.0.0.1
+options edns0 trust-ad
 search medunigraz.at
 ```
-Where in the original file only:<br>
+Where in the original file only:
+
 ```
-nameserver 127.0.0.53<br>
-options edns0 trust-ad<br>
-search medunigraz.at`<br>
+nameserver 127.0.0.53
+options edns0 trust-ad
+search medunigraz.at
 ```
 
 was present we commented `\# nameserver 127.0.0.53` out and made the computer send information only to our defined server.<br>
@@ -133,16 +135,16 @@ Lastly you add dnsmasq to your hosts file sice all the information about DNS-Hos
 `sudo nano /etc/hosts`<br>
 you will see something like thew following:<br>
 ```
-127.0.0.1	localhost<br>
-127.0.1.1	simon-XPS<br>
-127.0.0.1	dnsmasq<br>
+127.0.0.1	localhost
+127.0.1.1	simon-XPS
+127.0.0.1	dnsmasq
 
-\# The following lines are desirable for IPv6 capable hosts<br>
-::1     ip6-localhost ip6-loopback<br>
-fe00::0 ip6-localnet<br>
-ff00::0 ip6-mcastprefix<br>
-ff02::1 ip6-allnodes<br>
-ff02::2 ip6-allrouters<br>
+\# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
 ```
 
 The important part you need to add is `127.0.0.1	dnsmasq`.<br>
@@ -151,33 +153,33 @@ Once this is done you can save and we are done.
 To test if we succeded we can either use the `dig bibbox.local.test` command. Outout shuld look like this:
 
 ```
-; <<>> DiG 9.16.1-Ubuntu <<>> bibbox.local.test<br>
-;; global options: +cmd<br>
-;; Got answer:<br>
-;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 36047<br>
-;; flags: qr aa rd ra ad; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1<br>
+; <<>> DiG 9.16.1-Ubuntu <<>> bibbox.local.test
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 36047
+;; flags: qr aa rd ra ad; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
 
-;; OPT PSEUDOSECTION:<br>
-; EDNS: version: 0, flags:; udp: 4096<br>
-;; QUESTION SECTION:<br>
-;bibbox.local.test.		IN	A<br>
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;bibbox.local.test.		IN	A
 
 ;; ANSWER SECTION:<br>
-bibbox.local.test.	0	IN	A	127.0.0.1<br>
+bibbox.local.test.	0	IN	A	127.0.0.1
 
-;; Query time: 0 msec<br>
-;; SERVER: 127.0.0.1#53(127.0.0.1)<br>
-;; WHEN: Di Okt 19 14:23:19 CEST 2021<br>
-;; MSG SIZE  rcvd: 62<br>`
+;; Query time: 0 msec
+;; SERVER: 127.0.0.1#53(127.0.0.1)
+;; WHEN: Di Okt 19 14:23:19 CEST 2021
+;; MSG SIZE  rcvd: 62
 ```
 
 Another option would be `nslookup bibbox.local.test`. Output should look like.
 
 ```
-Server:		127.0.0.1<br>
-Address:	127.0.0.1#53<br>
+Server:		127.0.0.1
+Address:	127.0.0.1#53
 
-Name:	bibbox.local.test<br>
+Name:	bibbox.local.test
 Address: 127.0.0.1
 ```
 
