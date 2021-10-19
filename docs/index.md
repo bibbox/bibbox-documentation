@@ -1,13 +1,13 @@
-# BIBBOX System:
+# BIBBOX System
 
 This documentation describes the new angular based Bibbox Docker Framework. <br>
 For the old framework documentation see the section **V3 - Old Documentation** below 
 
-## Initial Setup:
+## Initial Setup
 
 To install and use the bibbox software please follow these instructions:
 
-##### Install Docker Engine, Git and prepatory Steps, Linux:
+##### Install Docker Engine, Git and prepatory Steps, Linux
 
 Run the following commands:
 
@@ -20,7 +20,7 @@ Run the following commands:
 `sudo usermod -aG docker $USER`<br>
 `newgrp docker`<br>
 
-##### Install Docker Engine, MacOS, Windows:
+##### Install Docker Engine, MacOS, Windows
 
 To install the newest docker-engine package follow the install dokumentation on the official docker website. 
 
@@ -32,7 +32,7 @@ To install the newest docker-compose package follow the install dokumentation on
 
 [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/).
 
-##### Install the BIBBOX (in the Beta only Debian based Linux Distributions are featured):
+##### Install the BIBBOX (in the Beta only Debian based Linux Distributions are featured)
 
 Create the bibbox location folder: <br>
 `cd /opt`<br>
@@ -48,7 +48,7 @@ Warning using INSTALL.sh will reinstall nvm and set the nodejs version used by n
 
 Follow the instructions presented to you. 
 
-##### URL/Domain-Settings:
+##### URL/Domain-Settings
 
 When asked to: <br>
 ```
@@ -63,7 +63,7 @@ you either:
 
 As you may noted is is necccesary to forward all suburls towards the url you chose as well. This is neccesary since once you install an app it will be given an specific suburl or range of suburls where its Front-End will be reachable.
 
-##### DNS service setup:
+##### DNS service setup
 
 For example one could use dnsmasq to accomplish the goal stated above.
 
