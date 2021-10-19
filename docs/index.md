@@ -34,10 +34,10 @@ To install the newest docker-compose package follow the install dokumentation on
 
 ##### Install the BIBBOX (in the Beta only Debian based Linux Distributions are featured):
 
-Create the bibbox location folder
-`cd /opt`
-`sudo mkdir bibbox`
-`cd bibbox`
+Create the bibbox location folder: <br>
+`cd /opt`<br>
+`sudo mkdir bibbox`<br>
+`cd bibbox`<br>
 
 Clone the bibbox system repository to opt bibbox. Therefore change your working directory to /opt/bibbox/ wit `cd /opt/bibbox/` and run
 
@@ -67,10 +67,10 @@ For example one could use dnsmasq to accomplish the goal stated above.
 * Install dnsmasq:<br>
 `sudo apt-get install dnsmasq`
 * Configure dnsmasq:<br>
-First of all lets backup the default condifuration file dnsmasq creates. 
-`sudo cp /etc/dnsmasq.conf /etc/dnsmasq.conf.orig`
-Next we have to create a config file for dnsmasq
-`sudo nano /etc/dnsmasq.conf`
+First of all lets backup the default condifuration file dnsmasq creates.<br>
+`sudo cp /etc/dnsmasq.conf /etc/dnsmasq.conf.orig`<br>
+Next we have to create a config file for dnsmasq:<br>
+`sudo nano /etc/dnsmasq.conf`<br>
 If you for example choose bibbox.local.test as the domainname the contents of this file will look like:<br>
 ```
 listen-address=127.0.0.1<br>
@@ -88,7 +88,7 @@ So line by line this means:<br>
 * The `server=` parts are there to allow traffic not directed at our domain to be resolved to an public DNS server (googles DNS server in this case)
 To test if everything is fine you can type `dnsmasq --test` whic will tell you: dnsmasq: syntax check OK, if you did not do anything wrong in the file above.
 
-Next in order to make the computer use the created DNS-Server we need to set the namespace to the IP-Adress we provided in `listen-address` to achieve this we can edit the `/etc/resolv.conf`file.<br>
+Next in order to make the computer use the created DNS-Server we need to set the namespace to the IP-Adress we provided in `listen-address` to achieve this we can edit the `/etc/resolv.conf` file.<br>
 For example this could look like:
 ```
 \# This file is managed by man:systemd-resolved(8). Do not edit.<br>
@@ -122,9 +122,9 @@ search medunigraz.at`<br>
 was present we commented `\# nameserver 127.0.0.53` out and made the computer send information only to our defined server.<br>
 * As the warning states to make this changes permanent we would have to add write protection towards this file:
 This can be done by:<br>
-`sudo chattr +i /etc/resolv.conf'<br>
-In order to just try the Bibbox Sytem locally this can be ommited. Further note that there could be more `nameserver=` directives present<br>
-In order for dnsmasq to work all of those need to be commented out like `\# nameserver`(just put an \# in front of them).
+`sudo chattr +i /etc/resolv.conf` <br>
+In order to just try the Bibbox Sytem locally this can be ommited. <br>
+* NOTE that there could be more `nameserver=` directives present<br> In order for dnsmasq to work all of those need to be commented out like `\# nameserver`(just put an \# in front of them).
 
 Lastly you add dnsmasq to your hosts file sice all the information about DNS-Hosts will be read from there:<br>
 `sudo nano /etc/hosts`<br>
