@@ -90,10 +90,10 @@ So line by line this means:<br>
 * `expand-hosts` adds additional entries from the /etc/hosts file
 * `domain=bibbox.local.test` sets up the domain we need to resolve incoming traffic towards the internal bibbox proxy server
 * The `server=` parts are there to allow traffic not directed at our domain to be resolved to an public DNS server (googles DNS server in this case)
-To test if everything is fine you can type `dnsmasq --test` whic will tell you: dnsmasq: syntax check OK, if you did not do anything wrong in the file above.
+To test if everything is fine you can type `dnsmasq --test`, which will tell you: `dnsmasq: syntax check OK`, if you did not do anything wrong in `dnsmasq.conf`.
 
-Next in order to make the computer use the created DNS-Server we need to set the namespace to the IP-Adress we provided in `listen-address` to achieve this we can edit the `/etc/resolv.conf` file.<br>
-For example this could look like:
+Next in order to make the computer use the created DNS-Server we need to set the namespace to the IP-Adress we provided in `listen-address` to achieve this we can edit the `/etc/resolv.conf` file. We type `sudo nano /etc/resolv.conf` <br>
+The file, for example could, look like:
 ```
 \# This file is managed by man:systemd-resolved(8). Do not edit.
 \#
@@ -124,7 +124,7 @@ options edns0 trust-ad
 search medunigraz.at
 ```
 
-was present we commented `\# nameserver 127.0.0.53` out and made the computer send information only to our defined server.<br>
+was present. We commented `\# nameserver 127.0.0.53` out and made the computer send information only to our defined server.<br>
 * As the warning states to make this changes permanent we would have to add write protection towards this file:
 This can be done by:<br>
 `sudo chattr +i /etc/resolv.conf` <br>
