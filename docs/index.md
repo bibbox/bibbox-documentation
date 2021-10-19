@@ -51,7 +51,10 @@ Follow the instructions presented to you.
 ##### URL/Domain-Settings:
 
 When asked to: <br>
-Specify domainname + TLD (e.g. silicolabv4.bibbox.org):  <br>
+```
+Specify domainname + TLD (e.g. silicolabv4.bibbox.org):
+```
+
 you either: 
 
 * Have to enter an existing domain forwarding requests towards the Machine your Bibbox is running on (and forward all Suburls aka: add  ServerAlias \*.your.domain.com to your Host config).
