@@ -1,6 +1,6 @@
 site_name: BIBBOX
 
-nav:
+pages:
     - V4 - Beta: 
         - Documentation: V4-documentation.md
         - V4 - Create Apps: app-creators-manual_v4.md
