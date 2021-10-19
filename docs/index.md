@@ -131,8 +131,8 @@ This can be done by:<br>
 In order to just try the Bibbox Sytem locally this can be ommited. <br>
 * NOTE that there could be more `nameserver=` directives present<br> In order for dnsmasq to work all of those need to be commented out like `\# nameserver`(just put an \# in front of them).
 
-Lastly you add dnsmasq to your hosts file sice all the information about DNS-Hosts will be read from there:<br>
-`sudo nano /etc/hosts`<br>
+Lastly you have to add `dnsmasq` to your hosts file, since all the information about DNS-Hosts will be read from there:<br>
+Open it by typing `sudo nano /etc/hosts`<br>
 you will see something like thew following:<br>
 ```
 127.0.0.1	localhost
