@@ -3,6 +3,12 @@
 This documentation describes the new angular based Bibbox Docker Framework. <br>
 For the old framework documentation see the section **V3 - Old Documentation** below 
 
+## Get started
+
+* What is the Bibbox Framework ?
+
+The Bibbox Framework originally was created to serve as a Biobank in a Box (hence Bibbox). So this means it provides the possibility to create install apps and serve them directly towards teh internet.
+
 ## Initial Setup
 
 To install and use the bibbox software please follow these instructions:
