@@ -2,7 +2,7 @@ site_name: BIBBOX
 
 pages:
     - V4 - Beta: 
-        - Documentation: V4-documentation.md
+        - Documentation: index.md
         - V4 - Create Apps: app-creators-manual_v4.md
     - V3 - Old Documentation:
         - Introduction: index.md
