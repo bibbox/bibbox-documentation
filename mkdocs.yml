@@ -5,7 +5,7 @@ pages:
         - Documentation: index.md
         - V4 - Create Apps: app-creators-manual_v4.md
     - V3 - Old Documentation:
-        - Introduction: index.md
+        - Introduction: v3_introduction.md
         - Installation from image: installation-image.md
         - Installation from source: installation-source.md
         - Install Apps: admin-documentation.md
