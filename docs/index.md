@@ -58,8 +58,8 @@ Specify domainname + TLD (e.g. silicolabv4.bibbox.org):
 you either: 
 
 * Have to enter an existing domain forwarding requests towards the Machine your Bibbox is running on (and forward all Suburls aka: add  ServerAlias \*.your.domain.com to your Host config).
-* Add the URL you want to use locally to your /etc/hosts file (see [https://linuxize.com/post/how-to-edit-your-hosts-file/](edit Hosts file))
-* Set up a DNS Service (dnsmasque) to create a local domain to resolve your requests towards the internal Proxy-Server operated by the bibbox
+* Add the URL you want to use locally to your /etc/hosts file (see [https://linuxize.com/post/how-to-edit-your-hosts-file/](edit Hosts file)) which will only allow you to see the Bibbox Frontend. App Usage and installation wont work. 
+* Best Option: Set up a DNS Service (e.g.:dnsmasque) to create a local domain to resolve your requests towards the internal Proxy-Server operated by the bibbox
 
 As you may noted is is necccesary to forward all suburls towards the url you chose as well. This is neccesary since once you install an app it will be given an specific suburl or range of suburls where its Front-End will be reachable.
 
@@ -92,7 +92,7 @@ So line by line this means:<br>
 * The `server=` parts are there to allow traffic not directed at our domain to be resolved to an public DNS server (googles DNS server in this case)
 To test if everything is fine you can type `dnsmasq --test`, which will tell you: `dnsmasq: syntax check OK`, if you did not do anything wrong in `dnsmasq.conf`.
 
-Next in order to make the computer use the created DNS-Server we need to set the namespace to the IP-Adress we provided in `listen-address` to achieve this we can edit the `/etc/resolv.conf` file. We type `sudo nano /etc/resolv.conf` <br>
+Next in order to make the computer use the created DNS-Server, we need to set the namespace to the IP-Adress we provided in `listen-address`. To achieve this we can edit the `/etc/resolv.conf` file. We type `sudo nano /etc/resolv.conf` <br>
 The file, for example could, look like:
 ```
 \# This file is managed by man:systemd-resolved(8). Do not edit.
@@ -150,7 +150,7 @@ ff02::2 ip6-allrouters
 The important part you need to add is `127.0.0.1	dnsmasq`.<br>
 Once this is done you can save and we are done.
 
-To test if we succeded we can either use the `dig bibbox.local.test` command. Outout shuld look like this:
+To test if we succeded we can use the `dig bibbox.local.test` command. Output shuld look like this:
 
 ```
 ; <<>> DiG 9.16.1-Ubuntu <<>> bibbox.local.test
@@ -173,7 +173,7 @@ bibbox.local.test.	0	IN	A	127.0.0.1
 ;; MSG SIZE  rcvd: 62
 ```
 
-Another option would be `nslookup bibbox.local.test`. Output should look like.
+Another option would be to type `nslookup bibbox.local.test`. Output should look like:
 
 ```
 Server:		127.0.0.1
@@ -183,7 +183,7 @@ Name:	bibbox.local.test
 Address: 127.0.0.1
 ```
 
-* NOTE: Of course you can choose any domain name you like. Just be shure to change `bibbox.local.test` to the desired Domain.
+* NOTE: Of course you can choose any domain-name you like. Just be shure to change `bibbox.local.test` to the desired domain-name.
 * [https://www.tecmint.com/setup-a-dns-dhcp-server-using-dnsmasq-on-centos-rhel/](https://www.tecmint.com/setup-a-dns-dhcp-server-using-dnsmasq-on-centos-rhel/) has more info on the topic
 * As always Google is your Friend. Simply Type any Error message you receive into the search bar.
 
