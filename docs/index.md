@@ -1,6 +1,7 @@
 # BIBBOX System
 
-This dcumentation describes the new angular based Bibbox Docker Framework
+This documentation describes the new angular based Bibbox Docker Framework. <br>
+For the old framework documentation see the section **V3 - Old Documentation** below 
 
 ## Initial Setup
 
@@ -55,7 +56,7 @@ you either:
 
 * Have to enter an existing domain forwarding requests towards this Machine (and forward all Suburls aka: add  ServerAlias \*.your.domain.com to your Host config)
 * Add the URL you want to use locally to your /etc/hosts file (see [https://linuxize.com/post/how-to-edit-your-hosts-file/](edit Hosts file))
-* Set up a DNS Service (Apache or Nginx) to resolve your requests towards the internal Proxy-Server operated by the bibbox
+* Set up a DNS Service (dnsmasque) to resolve your requests towards the internal Proxy-Server operated by the bibbox
 
 As you may noted is is necccesary to forward all suburls towards the url you chose as well. This is neccesary since once you install an app it will be given an specific suburl or range of suburls where its Front-End will be reachable.
 
