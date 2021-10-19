@@ -64,7 +64,7 @@ TODO !
 ##### Installing apps
 
 Once you did the above steps correctly you should be able to connect to your local Bibbox installation via the URL you chose.
-You should see [http://silicolabv4.bibbox.org/](http://silicolabv4.bibbox.org/).
+You should see an interface as at [http://silicolabv4.bibbox.org/](http://silicolabv4.bibbox.org/).
 
 
 
