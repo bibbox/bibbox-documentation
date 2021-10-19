@@ -43,6 +43,8 @@ Clone the bibbox system repository to opt bibbox. Therefore change your working 
 `sudo git clone https://github.com/bibbox/sys-bibbox.git`<br>
 `sudo bash INSTALL.sh`<br>
 
+Warning using INSTALL.sh will reinstall nvm and set the nodejs version used by npm to 14.16.0
+
 Follow the instructions presented to you. 
 
 ##### URL-Settings
@@ -53,7 +55,7 @@ you either:
 
 * Have to enter an existing domain forwarding requests towards this Machine (and forward all Suburls aka: add  ServerAlias \*.your.domain.com to your Host config)
 * Add the URL you want to use locally to your /etc/hosts file (see [https://linuxize.com/post/how-to-edit-your-hosts-file/](edit Hosts file))
-* Set up an Webserver (Apache or Nginx) to forward your requests towards the internal Proxy-Server operated by the bibbox
+* Set up a DNS Service (Apache or Nginx) to resolve your requests towards the internal Proxy-Server operated by the bibbox
 
 As you may noted is is necccesary to forward all suburls towards the url you chose as well. This is neccesary since once you install an app it will be given an specific suburl or range of suburls where its Front-End will be reachable.
 
