@@ -1,4 +1,4 @@
-# Initial Setup Debian based LINUX
+## Initial Setup Debian based LINUX
  
 To install and use the bibbox software please follow these instructions:
 
