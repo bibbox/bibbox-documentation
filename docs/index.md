@@ -11,6 +11,21 @@ For the old framework documentation see the section **V3 - Old Documentation**
 
 The Bibbox Framework originally was created to serve as a Biobank in a Box (hence Bibbox). So this means it provides the possibility to create install apps and serve them directly towards the End-User. In the current state we are building apps to support Pathologists and Biobanks in their direct work as well as in Data-Management. The current Framework mainly serves as a workflow demo SAAS-System and is not going into a productive state anytime soon. 
 
+* How does it work ?
+
+Basically the Bibbox itsself consists of a series of docker containers. The basic container strucutre is given by:
+
+* Apache Proxyserver (Front-End Server and Proxy Server for the Apps)
+* Backend (Flask Rest API for data exchange from Front-End) 
+* Postgres (Permanent Data Storage)
+* Celery (Asynchronous Task scheduling)
+* Redis (Faster data-store for volatile and cache data)
+
+For more information about each container itsself see the sys-bibbox GitHub repository at [https://github.com/bibbox/sys-bibbox](https://github.com/bibbox/sys-bibbox)
+
+The detailed documentation is currently under construction and will be subsequently updated see [Developer Documentation](dev_v4_start.md)
+
+
 ##### Bibbox user interface overview
 To get an overview over the new interface you can got to [http://silicolabv4.bibbox.org/](http://silicolabv4.bibbox.org/).
 
