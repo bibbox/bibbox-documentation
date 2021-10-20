@@ -110,7 +110,7 @@ nameserver 127.0.0.1
 options edns0 trust-ad
 search medunigraz.at
 ```
-Where in the original file only:
+Where in the original file only
 
 ```
 nameserver 127.0.0.53
@@ -120,9 +120,7 @@ search medunigraz.at
 
 was present. We commented `\# nameserver 127.0.0.53` out and made the computer send information only to our defined server.<br>
 * As the warning states to make this changes permanent we would have to add write protection towards this file:
-This can be done by:<br>
-`sudo chattr +i /etc/resolv.conf` <br>
-In order to just try the Bibbox Sytem locally this can be ommited. <br>
+This can be done by: `sudo chattr +i /etc/resolv.conf` In order to just try the Bibbox Sytem locally this can be ommited and everything will be reset on the next reboot. <br>
 * NOTE that there could be more `nameserver=` directives present<br> In order for dnsmasq to work all of those need to be commented out like `\# nameserver`(just put an \# in front of them).
 
 Lastly you have to add `dnsmasq` to your hosts file, since all the information about DNS-Hosts will be read from there:<br>
