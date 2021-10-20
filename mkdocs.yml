@@ -3,6 +3,7 @@ site_name: BIBBOX
 pages:
     - V4 - Beta: 
         - Set-up/Get started: index.md
+        - Install V4 (Linux): installation_v4_linux.md
         - V4 - Create Apps: app-creators-manual_v4.md
     - V3 - Old Documentation:
         - Introduction: v3_introduction.md
