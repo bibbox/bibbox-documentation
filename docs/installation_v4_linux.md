@@ -80,12 +80,11 @@ server=8.8.4.4
 address=/bibbox.local.test/127.0.0.1
 ```
 
-So line by line this means:<br> 
 * `listen-address = 127.0.0.1` means that we listen to all traffic on the local computer<br>
-* `expand-hosts` adds additional entries from the /etc/hosts file
-* `domain=bibbox.local.test` sets up the domain we need to resolve incoming traffic towards the internal bibbox proxy server
+* `expand-hosts` adds additional entries from the /etc/hosts file<br>
+* `domain=bibbox.local.test` sets up the domain we need to resolve incoming traffic towards the internal bibbox proxy server<br>
 * The `server=` parts are there to allow traffic not directed at our domain to be resolved to an public DNS server (googles DNS server in this case)
-To test if everything is fine you can type `dnsmasq --test`, which will tell you: `dnsmasq: syntax check OK`, if you did not do anything wrong in `dnsmasq.conf`.
+To test if everything is fine you can type `dnsmasq --test`, which will tell you: `dnsmasq: syntax check OK`, if you did not do anything wrong in `dnsmasq.conf`.<br>
 
 Next in order to make the computer use the created DNS-Server, we need to set the namespace to the IP-Adress we provided in `listen-address`. To achieve this we can edit the `/etc/resolv.conf` file. We type `sudo nano /etc/resolv.conf` <br>
 The file, for example could, look like:
