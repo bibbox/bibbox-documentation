@@ -33,6 +33,7 @@ The screen shows the currently running instances and offers more possibilities. 
 * Call the Apps UI via the switch Button on the top left of the apps tile
 * See the Apps dashboard by clicking the Gear Symbol on the bottom left of the apps tile
 * Call the logs of the singular Docker containers by clicking the Book Symbol in the bottom-middle of the apps tile
+* The light sgnifies the status of the app - Green: Running; Yellow: Installing; Red: Stopped
 
 
 
