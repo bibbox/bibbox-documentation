@@ -1,4 +1,4 @@
-## Developer Documnetation
+## Developer Documentation
 
 #### Project structure and outline
 
@@ -21,5 +21,10 @@ The Bibbox docker system can mainly be divided into 3 parts:
 
 #### Front-End Details
 
-The Frontend is angular based and uses the ngrx-store principle to achieve the desired functionality ([https://ngrx.io/guide/store](https://ngrx.io/guide/store)).
+* The Frontend is angular based and uses the ngrx-store principle to achieve the desired functionality ([https://ngrx.io/guide/store](https://ngrx.io/guide/store)).
+* Code Structure: TODO
+
+#### Set up Front-End Developement environment
+
+
 
