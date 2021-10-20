@@ -24,7 +24,7 @@ By clicking onto the Store-Button on top you will get to the app overview. ([htt
 
 To learn more about installing an App goto [Install Apps](installation_v4_apps.md)
 
-Clicking onto the Instances-Button will take you to the currently running instances ([http://silicolabv4.bibbox.org/instances](http://silicolabv4.bibbox.org/instances).<br> 
+Clicking onto the Instances-Button will take you to the currently running instances ([http://silicolabv4.bibbox.org/instances](http://silicolabv4.bibbox.org/instances)).<br> 
 * NOTE: If you installed your Bibbox locally you might have not installed any instances and this screen is empty.
 
 ![App Instances](images/v4/v4_interface_appinstances.png)
@@ -33,7 +33,12 @@ The screen shows the currently running instances and offers more possibilities. 
 * Call the Apps UI via the switch Button on the top left of the apps tile
 * See the Apps dashboard by clicking the Gear Symbol on the bottom left of the apps tile
 * Call the logs of the singular Docker containers by clicking the Book Symbol in the bottom-middle of the apps tile
-* The light sgnifies the status of the app - Green: Running; Yellow: Installing; Red: Stopped
+* The light signifies the status of the app - Green: Running; Yellow: Installing; Red: Stopped
+
+You might noticed, that on all screens there is a little green hook on the very top right of the page. This is a short link to the last page of the third page of top navigation bar: The activity menu. 
+
+![Activities](images/v4/v4_interface_activities.png)
+
 
 
 
