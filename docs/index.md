@@ -7,17 +7,10 @@ For the old framework documentation see the section **V3 - Old Documentation** b
 
 * What is the Bibbox Framework ?
 
-The Bibbox Framework originally was created to serve as a Biobank in a Box (hence Bibbox). So this means it provides the possibility to create install apps and serve them directly towards the End-User. In the 
+The Bibbox Framework originally was created to serve as a Biobank in a Box (hence Bibbox). So this means it provides the possibility to create install apps and serve them directly towards the End-User. In the current state we are building apps to support Pathologists and Biobanks in their direct work as well as in Data-Management. The current Framework mainly serves as a workflow demo SAAS-System and is not going into a productive state anytime soon. 
 
 ##### Installing apps
 
-Once you did the above steps correctly you should be able to connect to your local Bibbox installation via the URL/domain you chose.
-You should see an interface as at [http://silicolabv4.bibbox.org/](http://silicolabv4.bibbox.org/).
+To get an overview over the new interface you can got to [http://silicolabv4.bibbox.org/](http://silicolabv4.bibbox.org/).
 
-
-
-
-
-
-
-
+![Starting Screen](images/v4/v4_interface_startscreen.png)
