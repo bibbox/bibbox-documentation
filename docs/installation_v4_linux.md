@@ -142,7 +142,9 @@ ff02::2 ip6-allrouters
 The important part you need to add is `127.0.0.1	dnsmasq`.<br>
 Once this is done you can save and we are done.
 
-To test if we succeded we can use the `dig bibbox.local.test` command. Output shuld look like this:
+To test if we succeded we can use<br> 
+`dig bibbox.local.test`.<br>
+Output shuld look like this:
 
 ```
 ; <<>> DiG 9.16.1-Ubuntu <<>> bibbox.local.test
