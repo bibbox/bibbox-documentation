@@ -7,15 +7,15 @@ pages:
         - Install Apps V4: installation_v4_apps.md
         - V4 - Create Apps: app-creators-manual_v4.md
     - V3 - Old Documentation:
-        - Introduction: v3_introduction.md
-        - Installation from image: installation-image.md
-        - Installation from source: installation-source.md
-        - Install Apps: admin-documentation.md
-        - Create Apps: app-creators-manual.md
+        - Introduction: V3_docs/v3_introduction.md
+        - Installation from image: V3_docs/installation-image.md
+        - Installation from source: V3_docs/installation-source.md
+        - Install Apps: V3_docs/admin-documentation.md
+        - Create Apps: V3_docs/app-creators-manual.md
         - Intstall Apps:
-            - OpenSpecimen: apptutorials/openspecimen/openspecimen.md
-            - Phenotips: apptutorials/phenotips/phenotips.md
-            - Molgenis: apptutorials/molgenis/molgenis.md
-        - Under the hood: technical.md
+            - OpenSpecimen: V3_docs/apptutorials/openspecimen/openspecimen.md
+            - Phenotips: V3_docs/apptutorials/phenotips/phenotips.md
+            - Molgenis: V3_docs/apptutorials/molgenis/molgenis.md
+        - Under the hood: V3_docs/technical.md
 
 theme: readthedocs
