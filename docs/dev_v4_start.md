@@ -18,6 +18,9 @@ The Bibbox docker system can mainly be divided into 3 parts:
 
 * Apacheproxy (Main linking centerpoint [https://github.com/bibbox/sys-bibbox/tree/master/apacheproxy](https://github.com/bibbox/sys-bibbox/tree/master/apacheproxy))
 
+#### Prequisites
+
+Bibbox uses docker and docker-compose in its backend to create and 
 
 #### Front-End Details
 
@@ -26,5 +29,7 @@ The Bibbox docker system can mainly be divided into 3 parts:
 
 #### Set up Front-End Developement environment
 
+Easiset way ---> Install Bibbox locally under linux --> install VS-Code --> Set up local DNS Service --> goto sys-bibbox/frontend -->type code . into bash --> after vs code opens type ng serve --> open link the console shows you --> change any code file and watch it change live in your browser.
 
+Prequesite is that the DNS Service and Bibbox installation fully works
 
