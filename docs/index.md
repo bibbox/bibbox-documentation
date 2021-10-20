@@ -3,7 +3,7 @@
 This documentation describes the new angular based Bibbox Docker Framework. <br>
 For the old framework documentation see the section **V3 - Old Documentation**
 
-* If you already know your way arround Docker and just want to install a local instance on Linux jump to [Install Bibbox](installation_v4_bibbox_linux.md)
+* If you already know your way arround Docker and just want to install a local instance on Linux jump to [Install Bibbox](V4 - Install Bibbox(Linux))
 
 ## Get started
 
@@ -23,7 +23,7 @@ Basically the Bibbox itsself consists of a series of docker containers. The basi
 
 For more information about each container itsself see the sys-bibbox GitHub repository at [https://github.com/bibbox/sys-bibbox](https://github.com/bibbox/sys-bibbox)
 
-The detailed documentation is currently under construction and will be subsequently updated see [Developer Documentation](dev_v4_start.md)
+The detailed documentation is currently under construction and will be subsequently updated see [Developer Documentation](V4 - Developers)
 
 
 ##### Bibbox user interface overview
@@ -37,7 +37,7 @@ By clicking onto the Store-Button on top you will get to the app overview. ([htt
 
 ![App Store](images/v4/v4_interface_appstore.png)
 
-To learn more about installing an App goto [Install Apps](installation_v4_apps.md)
+To learn more about installing an App goto [Install Apps](V4 - Install Apps)
 
 Clicking onto the Instances-Button will take you to the currently running instances ([http://silicolabv4.bibbox.org/instances](http://silicolabv4.bibbox.org/instances)).<br> 
 * NOTE: If you installed your Bibbox locally you might have not installed any instances and this screen is empty.
