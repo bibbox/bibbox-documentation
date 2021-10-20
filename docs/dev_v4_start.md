@@ -14,7 +14,7 @@ The Bibbox docker system can mainly be divided into 3 parts:
   * Redis Data Store (Official Redis Docker image. Used by Celery as cache store)
   * Adminer (Official Docker image for DB debugging)
   * Celery Monitor (Celery container with Frotnend to debug asynchronous tasks)
-  * cadvisor (Monitoring for the completet docker-compose bibbox chain)
+  * cadvisor (Monitoring for the complete docker-compose bibbox chain)
 
 * Apacheproxy (Main linking centerpoint [https://github.com/bibbox/sys-bibbox/tree/master/apacheproxy](https://github.com/bibbox/sys-bibbox/tree/master/apacheproxy))
 
