@@ -18,9 +18,15 @@ The Bibbox docker system can mainly be divided into 3 parts:
 
 * Apacheproxy (Main linking centerpoint [https://github.com/bibbox/sys-bibbox/tree/master/apacheproxy](https://github.com/bibbox/sys-bibbox/tree/master/apacheproxy))
 
+To get an idea how this works in an easier fashion you can have a look at [https://github.com/mrsan22/Angular-Flask-Docker-Skeleton](https://github.com/mrsan22/Angular-Flask-Docker-Skeleton), which served as base for the work done on the Bibbox docker framework. The nginx implementation was replaced by Apache since this offered a more convenient workflow.
+
 #### Prequisites
 
-Bibbox uses docker and docker-compose in its backend to create and 
+The following applications need to be installed or are installed using the INSTALL.sh script:
+
+* Docker and docker-compose
+* nodejs, nvm (Node version manager) and npm (node package manager) (see INSTALL.sh for version details)
+* Python 3.x (see requirements.txt in the repository for more information on python requirements)
 
 #### Front-End Details
 
@@ -29,7 +35,15 @@ Bibbox uses docker and docker-compose in its backend to create and
 
 #### Set up Front-End Developement environment
 
-Easiset way ---> Install Bibbox locally under linux --> install VS-Code --> Set up local DNS Service --> goto sys-bibbox/frontend -->type code . into bash --> after vs code opens type ng serve --> open link the console shows you --> change any code file and watch it change live in your browser.
+* **Easiset way (Linux Debian based):**<br> 
+  * Install Bibbox locally under linux (See [Install Bibbox](installation_v4_bibbox_linux)
+  * Install VS-Code (Goto [https://code.visualstudio.com/download](VS Code Download)
+  * Set up local DNS Service (See [Install Bibbox](installation_v4_bibbox_linux) 
+  * Goto sys-bibbox/frontend 
+  * Type `code .` into bash
+  * After vs Code opens type `ng serve` 
+  * Open the link the console shows you (If setup went correctly you should see a Bibbox interface without any errors) 
+  * Change any code file and watch it change live in your browser.
 
-Prequesite is that the DNS Service and Bibbox installation fully works
+* **NOTE**: Prequesite is that the DNS Service and Bibbox installation fully works
 
