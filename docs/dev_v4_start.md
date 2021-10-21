@@ -37,8 +37,8 @@ The following applications need to be installed or are installed using the INSTA
 
 * **Easiset way (Linux Debian based):**<br> 
   * Install Bibbox locally under linux (See [Install Bibbox](installation_v4_bibbox_linux)
-  * Install VS-Code (Goto [https://code.visualstudio.com/download](VS Code Download)
-  * Set up local DNS Service (See [Install Bibbox](installation_v4_bibbox_linux) 
+  * Install VS-Code (Goto [https://code.visualstudio.com/download](VSCode)
+  * Set up local DNS Service (See [Install Bibbox](installation_v4_bibbox_linux))
   * Goto sys-bibbox/frontend 
   * Type `code .` into bash
   * After vs Code opens type `ng serve` 
