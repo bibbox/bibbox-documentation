@@ -48,6 +48,7 @@ The following applications need to be installed or are installed using the INSTA
 * **NOTE**: Prequesite is that the DNS Service and Bibbox installation fully works
 
 **Front end TODO'S**:
+
 * Authentication for users: See tutorial here [https://mherman.org/blog/authentication-in-angular-with-ngrx/](https://mherman.org/blog/authentication-in-angular-with-ngrx/)
 * Styling
 
