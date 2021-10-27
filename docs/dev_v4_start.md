@@ -282,8 +282,7 @@ The Backend Code can be grouped the backend code regarding:<br>
 │   └── utils<br>
 │       ├── common.py<br>
 │       └── __init__.py<br>
-
-* ***Part III: Init Stuff for websockets and Falsk + logs***
+* ***Part III: Init Stuff for websockets and Falsk + logs***<br>
 ├── celery_worker.py<br>
 ├── debug-test.py<br>
 ├── Dockerfile<br>
