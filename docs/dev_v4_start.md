@@ -176,7 +176,7 @@ sys-bibbox/frontend/src<br>
 │           ├── validator.service.spec.ts<br>
 │           └── validator.service.ts<br>
 ├── app.config.ts (created by Angular CLI) <br> 
-* Part III
+* Part III images and build environments <br>
 ├── assets<br>
 │   ├── announced.png<br>
 │   ├── b3africa.png<br>
