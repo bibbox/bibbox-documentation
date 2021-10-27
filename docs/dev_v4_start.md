@@ -120,7 +120,7 @@ sys-bibbox/frontend/src<br>
 │   │   │       ├── instance-tile.component.scss<br>
 │   │   │       ├── instance-tile.component.spec.ts<br>
 │   │   │       └── instance-tile.component.ts<br>
-│   │   ├── login<br>
+│   │   ├── login ***TODO***<br>
 │   │   │   ├── login.component.html<br>
 │   │   │   ├── login.component.scss<br>
 │   │   │   ├── login.component.spec.ts<br>
@@ -228,6 +228,7 @@ The Backend Code can be grouped the backend code regarding:<br>
     * services implements the SQL-Alchemy services consuming the models
 * static features Api spec files in different formats
 * util features constants and globals in a single script
+* Other files cover init and configs for falsk and the neccesary interfaces
 
 /opt/bibbox/sys-bibbox/backend/<br>
 ├── app<br>
