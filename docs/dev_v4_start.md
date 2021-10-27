@@ -232,7 +232,7 @@ The Backend Code can be grouped the backend code regarding:<br>
 
 /opt/bibbox/sys-bibbox/backend/<br>
 ├── app<br>
-* ***Part I: Main Code influencing Front end behaviour***
+* ***Part I: Main Code influencing Front end behaviour***<br>
 │   ├── api<br>
 │   │   ├── activity.py<br>
 │   │   ├── apps.py<br>
