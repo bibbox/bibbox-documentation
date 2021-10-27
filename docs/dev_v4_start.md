@@ -211,6 +211,86 @@ sys-bibbox/frontend/src<br>
 ├── styles-variables.scss<br>
 └── test.ts<br>
 
+**Front end TODO'S**:
+
+* Authentication for users; 
+    * See tutorial here [https://mherman.org/blog/authentication-in-angular-with-ngrx/](https://mherman.org/blog/authentication-in-angular-with-ngrx/)
+* Styling
+
+#### Back-End Details
+
+The Backend Code can be grouped the backend code regarding:<br>
+* api: Code implementing the Flask API calls it uses code defined in
+    * the Bibbox Folder: Implements the file Handling and data I/O providing the neccesary JSON Data  to the API calls.
+
+
+/opt/bibbox/sys-bibbox/backend/<br>
+├── app<br>
+│   ├── api<br>
+│   │   ├── activity.py<br>
+│   │   ├── apps.py<br>
+│   │   ├── authentication.py<br>
+│   │   ├── default.py<br>
+│   │   ├── __init__.py<br>
+│   │   └── instance.py<br>
+│   ├── bibbox<br>
+│   │   ├── app.py<br>
+│   │   ├── docker_handler.py<br>
+│   │   ├── file_handler.py<br>
+│   │   ├── __init__.py<br>
+│   │   ├── instance_controler.py<br>
+│   │   ├── instance_handler.py<br>
+│   │   └── instance.py<br>
+│   ├── celeryconfig.py<br>
+│   ├── celerytasks<br>
+│   │   ├── __init__.py<br>
+│   │   └── tasks.py<br>
+│   ├── dirty_test_code.py<br>
+│   ├── __init__.py<br>
+│   ├── models<br>
+│   │   ├── activity.py<br>
+│   │   ├── app.py<br>
+│   │   ├── catalogue.py<br>
+│   │   ├── __init__.py<br>
+│   │   ├── log.py<br>
+│   │   └── user.py<br>
+│   ├── services<br>
+│   │   ├── activity_service.py<br>
+│   │   ├── app_service.py<br>
+│   │   ├── catalogue_service.py<br>
+│   │   ├── db_logger_service.py<br>
+│   │   ├── __init__.py<br>
+│   │   ├── log_service.py<br>
+│   │   ├── socketio_service.py<br>
+│   │   └── user_service.py<br>
+│   ├── static<br>
+│   │   ├── bibbox-api-spec old.yml<br>
+│   │   ├── bibbox-api-spec.yml<br>
+│   │   ├── main.html<br>
+│   │   └── swagger.json<br>
+│   ├── utility<br>
+│   │   ├── celery_util.py<br>
+│   │   └── __init__.py<br>
+│   └── utils<br>
+│       ├── common.py<br>
+│       └── __init__.py<br>
+├── celery_worker.py<br>
+├── debug-test.py<br>
+├── Dockerfile<br>
+├── entrypoint.sh<br>
+├── __init__.py<br>
+├── logs<br>
+│   ├── debug.log<br>
+│   ├── error.log<br>
+│   ├── info.log<br>
+│   └── warning.log<br>
+├── manage.py<br>
+├── requirements.txt<br>
+├── runflask.py<br>
+├── settings.py<br>
+├── uwsgi.ini<br>
+├── uwsgi_params<br>
+└── wsgi.py<br>
 
 #### Set up Front-End Developement environment
 
@@ -226,9 +306,5 @@ sys-bibbox/frontend/src<br>
 
 * **NOTE**: Prequesite is that the DNS Service and Bibbox installation fully works
 
-**Front end TODO'S**:
 
-* Authentication for users; 
-    * See tutorial here [https://mherman.org/blog/authentication-in-angular-with-ngrx/](https://mherman.org/blog/authentication-in-angular-with-ngrx/)
-* Styling
 
