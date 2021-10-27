@@ -137,7 +137,7 @@ sys-bibbox/frontend/src<br>
 │   │       └── sys-logs.component.ts<br>
 │   ├── httperror.interceptor.ts<br>
 
-* Part II: Store part implement all the actions, effects, models, reducers, selectors and services: <br>
+* ***Part II: Store part implement all the actions, effects, models, reducers, selectors and services:*** <br>
 │   └── store<br>
 │       ├── actions<br>
 │       │   ├── activity.actions.ts<br>
@@ -176,6 +176,7 @@ sys-bibbox/frontend/src<br>
 │           ├── validator.service.spec.ts<br>
 │           └── validator.service.ts<br>
 ├── app.config.ts (created by Angular CLI) <br> 
+***Note that this exactly resembels the structure given in the NGRx tutorial ([https://ngrx.io/guide/store](https://ngrx.io/guide/store)).***<br>
 * Part III images and build environments <br>
 ├── assets<br>
 │   ├── announced.png<br>
