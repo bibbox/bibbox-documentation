@@ -139,7 +139,7 @@ sys-bibbox/frontend/src<br>
 
 * Part II: Store part implement all the actions, effects, models, reducers, selectors and services: <br>
 │   └── store<br>
-│       ├── actions<br><br>
+│       ├── actions<br>
 │       │   ├── activity.actions.ts<br>
 │       │   ├── applications.actions.ts<br>
 │       │   └── instance.actions.ts<br>
