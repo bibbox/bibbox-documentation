@@ -32,7 +32,7 @@ The following applications need to be installed or are installed using the INSTA
 
 * The Frontend is angular based and uses the ngrx-store principle to achieve the desired functionality ([https://ngrx.io/guide/store](https://ngrx.io/guide/store)).
 **Code Structure:**
-* Part I: Everything visible in the Frontend is a component uses functions defined in the ngrx store part.<br>
+* ***Part I: Everything visible in the Frontend is a component uses functions defined in the ngrx store part.***<br>
 sys-bibbox/frontend/src<br>
 ├── app<br>
 │   ├── app.module.ts<br>
@@ -177,7 +177,7 @@ sys-bibbox/frontend/src<br>
 │           └── validator.service.ts<br>
 ├── app.config.ts (created by Angular CLI) <br> 
 ***Note that this exactly resembels the structure given in the NGRx tutorial ([https://ngrx.io/guide/store](https://ngrx.io/guide/store)).***<br>
-* Part III images and build environments <br>
+* ***Part III images and build environments*** <br>
 ├── assets<br>
 │   ├── announced.png<br>
 │   ├── b3africa.png<br>
@@ -231,7 +231,7 @@ The Backend Code can be grouped the backend code regarding:<br>
 
 /opt/bibbox/sys-bibbox/backend/<br>
 ├── app<br>
-* Part I: Main Code influencing Front end behaviour
+* ***Part I: Main Code influencing Front end behaviour***
 │   ├── api<br>
 │   │   ├── activity.py<br>
 │   │   ├── apps.py<br>
@@ -247,7 +247,7 @@ The Backend Code can be grouped the backend code regarding:<br>
 │   │   ├── instance_controler.py<br>
 │   │   ├── instance_handler.py<br>
 │   │   └── instance.py<br>
-* Part II DB and asynchronous Tasks
+* ***Part II DB and asynchronous Tasks***
 │   ├── celeryconfig.py<br>
 │   ├── celerytasks<br>
 │   │   ├── __init__.py<br>
@@ -282,7 +282,7 @@ The Backend Code can be grouped the backend code regarding:<br>
 │       ├── common.py<br>
 │       └── __init__.py<br>
 
-* Part III: Init Stuff for websockets and Falsk + logs
+* ***Part III: Init Stuff for websockets and Falsk + logs***
 ├── celery_worker.py<br>
 ├── debug-test.py<br>
 ├── Dockerfile<br>
