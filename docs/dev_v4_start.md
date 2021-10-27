@@ -222,10 +222,15 @@ sys-bibbox/frontend/src<br>
 The Backend Code can be grouped the backend code regarding:<br>
 * api: Code implementing the Flask API calls it uses code defined in
     * the Bibbox Folder: Implements the file Handling and data I/O providing the neccesary JSON Data  to the API calls.
-
+* celeryconfig files and tasks
+* models contains the DB implementations for the database
+    * services implements the SQL-Alchemy services consuming the models
+* static features Api spec files in different formats
+* util features constants and globals in a single script
 
 /opt/bibbox/sys-bibbox/backend/<br>
 ├── app<br>
+* Part I: Main Code influencing Front end behaviour
 │   ├── api<br>
 │   │   ├── activity.py<br>
 │   │   ├── apps.py<br>
@@ -241,6 +246,7 @@ The Backend Code can be grouped the backend code regarding:<br>
 │   │   ├── instance_controler.py<br>
 │   │   ├── instance_handler.py<br>
 │   │   └── instance.py<br>
+* Part II DB and asynchronous Tasks
 │   ├── celeryconfig.py<br>
 │   ├── celerytasks<br>
 │   │   ├── __init__.py<br>
@@ -274,6 +280,8 @@ The Backend Code can be grouped the backend code regarding:<br>
 │   └── utils<br>
 │       ├── common.py<br>
 │       └── __init__.py<br>
+
+* Part III: Init Stuff for websockets and Falsk + logs
 ├── celery_worker.py<br>
 ├── debug-test.py<br>
 ├── Dockerfile<br>
