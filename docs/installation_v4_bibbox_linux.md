@@ -141,7 +141,9 @@ ff02::2 ip6-allrouters
 ```
 
 The important part you need to add is `127.0.0.1	dnsmasq`.<br>
-Once this is done you can save and we are done.
+Once this is done restart the dnsmasq service by typing:<br> 
+`sudo sytemctl restart dnsmasq`<br>
+and we are done.
 
 To test if we succeded we can use<br> 
 `dig bibbox.local.test`.<br>
