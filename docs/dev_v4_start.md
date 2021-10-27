@@ -33,181 +33,181 @@ The following applications need to be installed or are installed using the INSTA
 * The Frontend is angular based and uses the ngrx-store principle to achieve the desired functionality ([https://ngrx.io/guide/store](https://ngrx.io/guide/store)).
 **Code Structure:**
 * Part I: Everything visible in the Frontend is a component uses functions defined in the ngrx store part.<br>
-sys-bibbox/frontend/src
-├── app
-│   ├── app.module.ts
-│   ├── app-routing.module.ts
-│   ├── commons.ts
-│   ├── components
-│   │   ├── about
-│   │   │   ├── contact
-│   │   │   │   ├── contact.component.html
-│   │   │   │   ├── contact.component.scss
-│   │   │   │   ├── contact.component.spec.ts
-│   │   │   │   └── contact.component.ts
-│   │   │   ├── imprint
-│   │   │   │   ├── imprint.component.html
-│   │   │   │   ├── imprint.component.scss
-│   │   │   │   ├── imprint.component.spec.ts
-│   │   │   │   └── imprint.component.ts
-│   │   │   └── partners
-│   │   │       ├── partners.component.html
-│   │   │       ├── partners.component.scss
-│   │   │       ├── partners.component.spec.ts
-│   │   │       └── partners.component.ts
-│   │   ├── activities
-│   │   │   ├── activities.component.html
-│   │   │   ├── activities.component.scss
-│   │   │   ├── activities.component.spec.ts
-│   │   │   ├── activities.component.ts
-│   │   │   └── activity-menu-overlay
-│   │   │       ├── activity-menu-overlay.component.html
-│   │   │       ├── activity-menu-overlay.component.scss
-│   │   │       ├── activity-menu-overlay.component.spec.ts
-│   │   │       └── activity-menu-overlay.component.ts
-│   │   ├── applications
-│   │   │   ├── application-group
-│   │   │   │   ├── application-group.component.html
-│   │   │   │   ├── application-group.component.scss
-│   │   │   │   ├── application-group.component.spec.ts
-│   │   │   │   ├── application-group.component.ts
-│   │   │   │   └── application-tile
-│   │   │   │       ├── application-tile.component.html
-│   │   │   │       ├── application-tile.component.scss
-│   │   │   │       ├── application-tile.component.spec.ts
-│   │   │   │       └── application-tile.component.ts
-│   │   │   ├── applications.component.html
-│   │   │   ├── applications.component.scss
-│   │   │   ├── applications.component.spec.ts
-│   │   │   ├── applications.component.ts
-│   │   │   ├── install-screen
-│   │   │   │   ├── install-screen.component.html
-│   │   │   │   ├── install-screen.component.scss
-│   │   │   │   ├── install-screen.component.spec.ts
-│   │   │   │   └── install-screen.component.ts
-│   │   │   └── install-screen-dialog
-│   │   │       ├── install-screen-dialog.component.html
-│   │   │       ├── install-screen-dialog.component.scss
-│   │   │       ├── install-screen-dialog.component.spec.ts
-│   │   │       └── install-screen-dialog.component.ts
-│   │   ├── app-scaffold
-│   │   │   ├── app.component.html
-│   │   │   ├── app.component.scss
-│   │   │   ├── app.component.spec.ts
-│   │   │   ├── app.component.ts
-│   │   │   ├── footer
-│   │   │   │   ├── footer.component.html
-│   │   │   │   ├── footer.component.scss
-│   │   │   │   ├── footer.component.spec.ts
-│   │   │   │   └── footer.component.ts
-│   │   │   └── header
-│   │   │       ├── header.component.html
-│   │   │       ├── header.component.scss
-│   │   │       ├── header.component.spec.ts
-│   │   │       └── header.component.ts
-│   │   ├── instances
-│   │   │   ├── instance-detail-page
-│   │   │   │   ├── instance-detail-page.component.html
-│   │   │   │   ├── instance-detail-page.component.scss
-│   │   │   │   ├── instance-detail-page.component.spec.ts
-│   │   │   │   └── instance-detail-page.component.ts
-│   │   │   ├── instances.component.html
-│   │   │   ├── instances.component.scss
-│   │   │   ├── instances.component.spec.ts
-│   │   │   ├── instances.component.ts
-│   │   │   └── instance-tile
-│   │   │       ├── instance-tile.component.html
-│   │   │       ├── instance-tile.component.scss
-│   │   │       ├── instance-tile.component.spec.ts
-│   │   │       └── instance-tile.component.ts
-│   │   ├── login
-│   │   │   ├── login.component.html
-│   │   │   ├── login.component.scss
-│   │   │   ├── login.component.spec.ts
-│   │   │   └── login.component.ts
-│   │   ├── not-found
-│   │   │   ├── not-found.component.html
-│   │   │   ├── not-found.component.scss
-│   │   │   ├── not-found.component.spec.ts
-│   │   │   └── not-found.component.ts
-│   │   └── sys-logs
-│   │       ├── sys-logs.component.html
-│   │       ├── sys-logs.component.scss
-│   │       ├── sys-logs.component.spec.ts
-│   │       └── sys-logs.component.ts
-│   ├── httperror.interceptor.ts
+sys-bibbox/frontend/src<br>
+├── app<br>
+│   ├── app.module.ts<br>
+│   ├── app-routing.module.ts<br>
+│   ├── commons.ts<br>
+│   ├── components<br>
+│   │   ├── about<br>
+│   │   │   ├── contact<br>
+│   │   │   │   ├── contact.component.html<br>
+│   │   │   │   ├── contact.component.scss<br>
+│   │   │   │   ├── contact.component.spec.ts<br>
+│   │   │   │   └── contact.component.ts<br>
+│   │   │   ├── imprint<br>
+│   │   │   │   ├── imprint.component.html<br>
+│   │   │   │   ├── imprint.component.scss<br>
+│   │   │   │   ├── imprint.component.spec.ts<br>
+│   │   │   │   └── imprint.component.ts<br>
+│   │   │   └── partners<br>
+│   │   │       ├── partners.component.html<br>
+│   │   │       ├── partners.component.scss<br>
+│   │   │       ├── partners.component.spec.ts<br>
+│   │   │       └── partners.component.ts<br>
+│   │   ├── activities<br>
+│   │   │   ├── activities.component.html<br>
+│   │   │   ├── activities.component.scss<br>
+│   │   │   ├── activities.component.spec.ts<br>
+│   │   │   ├── activities.component.ts<br>
+│   │   │   └── activity-menu-overlay<br>
+│   │   │       ├── activity-menu-overlay.component.html<br>
+│   │   │       ├── activity-menu-overlay.component.scss<br>
+│   │   │       ├── activity-menu-overlay.component.spec.ts<br>
+│   │   │       └── activity-menu-overlay.component.ts<br>
+│   │   ├── applications<br>
+│   │   │   ├── application-group<br>
+│   │   │   │   ├── application-group.component.html<br>
+│   │   │   │   ├── application-group.component.scss<br>
+│   │   │   │   ├── application-group.component.spec.ts<br>
+│   │   │   │   ├── application-group.component.ts<br>
+│   │   │   │   └── application-tile<br>
+│   │   │   │       ├── application-tile.component.html<br>
+│   │   │   │       ├── application-tile.component.scss<br>
+│   │   │   │       ├── application-tile.component.spec.ts<br>
+│   │   │   │       └── application-tile.component.ts<br>
+│   │   │   ├── applications.component.html<br>
+│   │   │   ├── applications.component.scss<br>
+│   │   │   ├── applications.component.spec.ts<br>
+│   │   │   ├── applications.component.ts<br>
+│   │   │   ├── install-screen<br>
+│   │   │   │   ├── install-screen.component.html<br>
+│   │   │   │   ├── install-screen.component.scss<br>
+│   │   │   │   ├── install-screen.component.spec.ts<br>
+│   │   │   │   └── install-screen.component.ts<br>
+│   │   │   └── install-screen-dialog<br>
+│   │   │       ├── install-screen-dialog.component.html<br>
+│   │   │       ├── install-screen-dialog.component.scss<br>
+│   │   │       ├── install-screen-dialog.component.spec.ts<br>
+│   │   │       └── install-screen-dialog.component.ts<br>
+│   │   ├── app-scaffold<br>
+│   │   │   ├── app.component.html<br>
+│   │   │   ├── app.component.scss<br>
+│   │   │   ├── app.component.spec.ts<br>
+│   │   │   ├── app.component.ts<br>
+│   │   │   ├── footer<br>
+│   │   │   │   ├── footer.component.html<br>
+│   │   │   │   ├── footer.component.scss<br>
+│   │   │   │   ├── footer.component.spec.ts<br>
+│   │   │   │   └── footer.component.ts<br>
+│   │   │   └── header<br>
+│   │   │       ├── header.component.html<br>
+│   │   │       ├── header.component.scss<br>
+│   │   │       ├── header.component.spec.ts<br>
+│   │   │       └── header.component.ts<br>
+│   │   ├── instances<br>
+│   │   │   ├── instance-detail-page<br>
+│   │   │   │   ├── instance-detail-page.component.html<br>
+│   │   │   │   ├── instance-detail-page.component.scss<br>
+│   │   │   │   ├── instance-detail-page.component.spec.ts<br>
+│   │   │   │   └── instance-detail-page.component.ts<br>
+│   │   │   ├── instances.component.html<br>
+│   │   │   ├── instances.component.scss<br>
+│   │   │   ├── instances.component.spec.ts<br>
+│   │   │   ├── instances.component.ts<br>
+│   │   │   └── instance-tile<br>
+│   │   │       ├── instance-tile.component.html<br>
+│   │   │       ├── instance-tile.component.scss<br>
+│   │   │       ├── instance-tile.component.spec.ts<br>
+│   │   │       └── instance-tile.component.ts<br>
+│   │   ├── login<br>
+│   │   │   ├── login.component.html<br>
+│   │   │   ├── login.component.scss<br>
+│   │   │   ├── login.component.spec.ts<br>
+│   │   │   └── login.component.ts<br>
+│   │   ├── not-found<br>
+│   │   │   ├── not-found.component.html<br>
+│   │   │   ├── not-found.component.scss<br>
+│   │   │   ├── not-found.component.spec.ts<br>
+│   │   │   └── not-found.component.ts<br>
+│   │   └── sys-logs<br>
+│   │       ├── sys-logs.component.html<br>
+│   │       ├── sys-logs.component.scss<br>
+│   │       ├── sys-logs.component.spec.ts<br>
+│   │       └── sys-logs.component.ts<br>
+│   ├── httperror.interceptor.ts<br>
 
 * Part II: Store part implement all the actions, effects, models, reducers, selectors and services: <br>
-│   └── store
-│       ├── actions
-│       │   ├── activity.actions.ts
-│       │   ├── applications.actions.ts
-│       │   └── instance.actions.ts
-│       ├── effects
-│       │   ├── activity.effects.ts
-│       │   ├── applications.effects.ts
-│       │   └── instance.effects.ts
-│       ├── models
-│       │   ├── activity.model.ts
-│       │   ├── application-group-item.model.ts
-│       │   ├── app-state.model.ts
-│       │   └── instance-item.model.ts
-│       ├── reducers
-│       │   ├── activity.reducer.ts
-│       │   ├── application-group.reducer.ts
-│       │   └── instance.reducer.ts
-│       ├── selectors
-│       │   ├── activity.selector.ts
-│       │   ├── application-group.selector.ts
-│       │   └── instance.selector.ts
-│       └── services
-│           ├── activity.service.spec.ts
-│           ├── activity.service.ts
-│           ├── application.service.spec.ts
-│           ├── application.service.ts
-│           ├── auth.service.spec.ts
-│           ├── auth.service.ts
-│           ├── instance.service.spec.ts
-│           ├── instance.service.ts
-│           ├── login.service.spec.ts
-│           ├── login.service.ts
-│           ├── socketio.service.spec.ts
-│           ├── socketio.service.ts
-│           ├── validator.service.spec.ts
-│           └── validator.service.ts
-├── app.config.ts
-├── assets
-│   ├── announced.png
-│   ├── b3africa.png
-│   ├── bbmri-eric.png
-│   ├── close.png
-│   ├── done.png
-│   ├── error.png
-│   ├── external_ref.png
-│   ├── favicon.ico
-│   ├── furley_bg.png
-│   ├── loading.gif
-│   ├── loading_old.gif
-│   ├── lock.png
-│   ├── new.png
-│   ├── pawn_small.png
-│   ├── silicolab_logo.png
-│   ├── silicolab_logo_small.png
-│   ├── silicolab_logo.svg
-│   └── silicolab_logo_white.png
-├── environments
-│   ├── environment.prod.ts
-│   ├── environment.prod.ts.template
-│   ├── environment.ts
-│   └── environment.ts.template
-├── favicon.ico
-├── index.html
-├── main.ts
-├── polyfills.ts
-├── proxy.conf.json
-├── styles.scss
-├── styles-variables.scss
-└── test.ts
+│   └── store<br>
+│       ├── actions<br><br>
+│       │   ├── activity.actions.ts<br>
+│       │   ├── applications.actions.ts<br>
+│       │   └── instance.actions.ts<br>
+│       ├── effects<br>
+│       │   ├── activity.effects.ts<br>
+│       │   ├── applications.effects.ts<br>
+│       │   └── instance.effects.ts<br>
+│       ├── models<br>
+│       │   ├── activity.model.ts<br>
+│       │   ├── application-group-item.model.ts<br>
+│       │   ├── app-state.model.ts<br>
+│       │   └── instance-item.model.ts<br>
+│       ├── reducers<br>
+│       │   ├── activity.reducer.ts<br>
+│       │   ├── application-group.reducer.ts<br>
+│       │   └── instance.reducer.ts<br>
+│       ├── selectors<br>
+│       │   ├── activity.selector.ts<br>
+│       │   ├── application-group.selector.ts<br>
+│       │   └── instance.selector.ts<br>
+│       └── services<br>
+│           ├── activity.service.spec.ts<br>
+│           ├── activity.service.ts<br>
+│           ├── application.service.spec.ts<br>
+│           ├── application.service.ts<br>
+│           ├── auth.service.spec.ts<br>
+│           ├── auth.service.ts<br>
+│           ├── instance.service.spec.ts<br>
+│           ├── instance.service.ts<br>
+│           ├── login.service.spec.ts<br>
+│           ├── login.service.ts<br>
+│           ├── socketio.service.spec.ts<br>
+│           ├── socketio.service.ts<br>
+│           ├── validator.service.spec.ts<br>
+│           └── validator.service.ts<br>
+├── app.config.ts<br>
+├── assets<br>
+│   ├── announced.png<br>
+│   ├── b3africa.png<br>
+│   ├── bbmri-eric.png<br>
+│   ├── close.png<br>
+│   ├── done.png<br>
+│   ├── error.png<br>
+│   ├── external_ref.png<br>
+│   ├── favicon.ico<br>
+│   ├── furley_bg.png<br>
+│   ├── loading.gif<br>
+│   ├── loading_old.gif<br>
+│   ├── lock.png<br>
+│   ├── new.png<br>
+│   ├── pawn_small.png<br>
+│   ├── silicolab_logo.png<br>
+│   ├── silicolab_logo_small.png<br>
+│   ├── silicolab_logo.svg<br>
+│   └── silicolab_logo_white.png<br>
+├── environments<br>
+│   ├── environment.prod.ts<br>
+│   ├── environment.prod.ts.template<br>
+│   ├── environment.ts<br>
+│   └── environment.ts.template<br>
+├── favicon.ico<br>
+├── index.html<br>
+├── main.ts<br>
+├── polyfills.ts<br>
+├── proxy.conf.json<br>
+├── styles.scss<br>
+├── styles-variables.scss<br>
+└── test.ts<br>
 
 
 #### Set up Front-End Developement environment
