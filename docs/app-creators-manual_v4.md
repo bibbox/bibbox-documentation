@@ -6,7 +6,7 @@ Contact [Heimo Müller](mailto:heimo.mueller@medunigraz.at), [Robert Reihs](mail
 
 ## Anatomy of an App
 
-An **App** is described within a BIBBOX Github repository. By convention the name of the repository starts with the prefix **"app-"**
+An **App** is described within a BIBBOX GitHub repository. By convention the name of the repository starts with the prefix **"app-"**
 A template repository can be found at:  <https://github.com/bibbox/app-template>
 
 
@@ -27,12 +27,12 @@ The default Github readme file shoud contain information about the used official
   
 ### INSTALL-APP.md
 
-Install instruction for the APP to follow after the first installation step (docker-compose up) is finished. This typicaly describes application specific configuration tasks. A link to this file is given in the Dashboard of the installed App. 
+Install instruction for the App to follow after the first installation step (docker-compose up) is finished. This typically describes application specific configuration tasks. A link to this file is given in the Dashboard of the installed App. 
     
   
 ### appinfo.json
     
-Specifies Information about the App as displayed in the BIBBOX App Store. 
+Specifies information about the App as displayed in the BIBBOX App Store. 
     
 ``` json
     {
@@ -52,8 +52,9 @@ Specifies Information about the App as displayed in the BIBBOX App Store.
 Based on this file the docker-compose.yml will be generated. The variables §§INSTANCE and all other environment and configuration variables starting with "§§" will be replaced during the installation. Each template for a docker compose file should link to the `bibbox-default-network` network. The `proxy` and `ports` section is used to create a `005-§§INSTANCE.conf` proxy file. 
 
 NOTE:
-- Only use tagged images versions (not latest). To ensure that the app stays stable over time.
-- Use the docker-compose `links` parameter to ensure that containers can "talk" to each other indent of the name set in §§INSTANCE.
+
+* Only use tagged images versions (not latest). To ensure that the app stays stable over time.
+* Use the docker-compose `links` parameter to ensure that containers can "talk" to each other indent of the name set in §§INSTANCE.
 
     
 ``` yml
@@ -168,6 +169,7 @@ Environment parameters for the docker-compose-template file. The user can set th
 ### fileinfo.json
 
 A list of commands to be run when installing an app, consisting of three categories: "environmental_replace", "script_replace" and "permissions".
+
 | key | description |
 |---|---|
 | environmental_replace | WIP - specifies files/directories where placeholders can be replaced easily |
