@@ -78,7 +78,7 @@ NOTE:
           - "80:80"
         depends_on:
           - §§INSTANCE-container2
-        volumes_from: 
+        volumes: 
           - ./data/container/app-data:/app-data
         proxy:
           TYPE: PRIMARY
@@ -98,7 +98,7 @@ NOTE:
         - "8000:8000"
       depends_on:
           - §§INSTANCE-app-db
-      volumes_from: 
+      volumes: 
         - ./data/container/app-data:/app-data
     
       §§INSTANCE-app-db:
@@ -113,7 +113,7 @@ NOTE:
           - MYSQL_DATABASE=§§MYSQL_DATABASE_NAME
           - MYSQL_USER=§§MYSQL_DATABASE_USER
           - MYSQL_PASSWORD=§§MYSQL_DATABASE_PASSWORD
-        volumes_from: 
+        volumes: 
           - ./data/db/var/app-data:/var/app-data
     
 ```
