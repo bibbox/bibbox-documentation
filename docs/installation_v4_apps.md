@@ -1,19 +1,20 @@
 ## Install Apps
 
-Installing Apps on the new Framework can be tested at [http://silicolabv4.bibbox.org/applications](http://silicolabv4.bibbox.org/applications)
+Installing Apps on the new framework can be tested at [http://silicolabv4.bibbox.org/applications](http://silicolabv4.bibbox.org/applications)
 
-* NOTE: After first installation of the Framework the system automatically fetches the List of available
+* NOTE: After first installation of the framework the system automatically fetches the list of available apps
 * NOTE: Only Apps listed as v4Testapps can be installed in the current Beta
 
 ![Installable Apps](images/v4/v4_install_testapps.png)
 
 Once you selected an app by clicking on its icon you will see a new window pop up. Since there can be different versions of an App available you have to select your version
-* NOTE: Due to the BETA Stadium of the Bibbox project currently only one version per Testapp is available
+
+* NOTE: Due to the BETA status of the Bibbox project currently only one version per testapp is available
 
 ![Install Step I](images/v4/v4_install_screen_1.png)
 
 After this click Install as shown on top of the image above. Next you will have to fill the parameters neccesary to actually run the app.<br>
-The parameters themselves can be checked at the App's Git Hub repository. In the example the selected App is [https://www.openmicroscopy.org/omero/](Omero)<br>
+The parameters themselves can be checked at the App's GitHub repository. In the example the selected App is [Omero](https://www.openmicroscopy.org/omero/)<br>
 After clicking onto Install you will be taken to the parameter setting screen:
 
 ![Install Step II](images/v4/v4_install_screen_2.png)
