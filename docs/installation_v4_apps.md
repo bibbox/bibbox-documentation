@@ -14,7 +14,7 @@ Once you selected an app by clicking on its icon you will see a new window pop u
 ![Install Step I](images/v4/v4_install_screen_1.png)
 
 After this click Install as shown on top of the image above. Next you will have to fill the parameters neccesary to actually run the app.<br>
-The parameters themselves can be checked at the App's GitHub repository. In the example the selected App is [Omero](https://www.openmicroscopy.org/omero/)<br>
+The parameters themselves can be checked at the App's GitHub repository. In the example the selected App is [Omero](https://www.openmicroscopy.org/omero/).<br>
 After clicking onto Install you will be taken to the parameter setting screen:
 
 ![Install Step II](images/v4/v4_install_screen_2.png)
