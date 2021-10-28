@@ -34,7 +34,7 @@ Create the bibbox location folder: <br>
 `sudo mkdir bibbox`<br>
 `cd bibbox`<br>
 
-Clone the bibbox system repository to opt bibbox. Therefore change your working directory to /opt/bibbox/ wit `cd /opt/bibbox/` and run
+Clone the bibbox system repository to opt bibbox. Therefore change your working directory to /opt/bibbox/ with `cd /opt/bibbox/` and run
 
 `sudo git clone https://github.com/bibbox/sys-bibbox.git`<br>
 `sudo bash INSTALL.sh`<br>
@@ -52,8 +52,8 @@ Specify domainname + TLD (e.g. silicolabv4.bibbox.org):
 
 you either: 
 
-* Have to enter an existing domain forwarding requests towards the Machine your Bibbox is running on (and forward all Suburls aka: add  ServerAlias \*.your.domain.com to your Host config).
-* Add the URL you want to use locally to your /etc/hosts file (see [https://linuxize.com/post/how-to-edit-your-hosts-file/](edit Hosts file)) which will only allow you to see the Bibbox Frontend. App Usage and installation wont work. 
+* Have to enter an existing domain forwarding requests towards the machine your Bibbox is running on (and forward all Suburls aka: add  ServerAlias \*.your.domain.com to your Host config).
+* Add the URL you want to use locally to your /etc/hosts file (see [edit Hosts file](https://linuxize.com/post/how-to-edit-your-hosts-file/)) which will only allow you to see the Bibbox Frontend. App usage and installation won't work. 
 * Best Option: Set up a DNS Service (e.g.:dnsmasque) to create a local domain to resolve your requests towards the internal Proxy-Server operated by the bibbox
 
 As you may noted is is necccesary to forward all suburls towards the url you chose as well. This is neccesary since once you install an app it will be given an specific suburl or range of suburls where its Front-End will be reachable.
@@ -119,9 +119,13 @@ search medunigraz.at
 ```
 
 was present. We commented `\# nameserver 127.0.0.53` out and made the computer send information only to our defined server.<br>
+
 * As the warning states to make this changes permanent we would have to add write protection towards this file:
+
 This can be done by: `sudo chattr +i /etc/resolv.conf` <br>
+
 In order to just try the Bibbox Sytem locally this can be ommited and everything will be reset on the next reboot. <br>
+
 * NOTE: There could be more `nameserver=` directives present. In order for dnsmasq to work all of those need to be commented out like `\# nameserver`(just put an \# in front of them).
 
 Lastly you have to add `dnsmasq` to your hosts file, since all the information about DNS-Hosts will be read from there:<br>
