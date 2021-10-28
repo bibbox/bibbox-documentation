@@ -103,7 +103,7 @@ NOTE:
     
       §§INSTANCE-app-db:
         image: mysql:8
-        container_name: §§INSTANCE-limesurvey-db
+        container_name: §§INSTANCE-appname-db
         restart: unless-stopped
         networks:
           - bibbox-default-network
