@@ -220,10 +220,11 @@ sys-bibbox/frontend/src<br>
 
 #### Back-End Details
 
-The Backend Code can be grouped the backend code regarding:<br>
+The Backend code can be grouped the backend code regarding:<br>
+
 * api: Code implementing the Flask API calls it uses code defined in
-    * the Bibbox Folder: Implements the file Handling and data I/O providing the neccesary JSON Data  to the API calls.
-* celeryconfig files and tasks
+    * the Bibbox Folder: Implements the file handling and data I/O providing the neccesary JSON data  to the API calls.
+* celery config files and tasks
 * models contains the DB implementations for the database
     * services implements the SQL-Alchemy services consuming the models
 * static features Api spec files in different formats
@@ -238,28 +239,28 @@ The Backend Code can be grouped the backend code regarding:<br>
 │   │   ├── apps.py<br>
 │   │   ├── authentication.py<br>
 │   │   ├── default.py<br>
-│   │   ├── __init__.py<br>
+│   │   ├── \_\_init\_\_.py<br>
 │   │   └── instance.py<br>
 │   ├── bibbox<br>
 │   │   ├── app.py<br>
 │   │   ├── docker_handler.py<br>
 │   │   ├── file_handler.py<br>
-│   │   ├── __init__.py<br>
+│   │   ├── \_\_init\_\_.py<br>
 │   │   ├── instance_controler.py<br>
 │   │   ├── instance_handler.py<br>
 │   │   └── instance.py<br>
-* ***Part II DB and asynchronous Tasks***
+* ***Part II DB and asynchronous Tasks***<br>
 │   ├── celeryconfig.py<br>
 │   ├── celerytasks<br>
-│   │   ├── __init__.py<br>
+│   │   ├── \_\_init\_\_.py<br>
 │   │   └── tasks.py<br>
 │   ├── dirty_test_code.py<br>
-│   ├── __init__.py<br>
+│   ├── \_\_init\_\_.py<br>
 │   ├── models<br>
 │   │   ├── activity.py<br>
 │   │   ├── app.py<br>
 │   │   ├── catalogue.py<br>
-│   │   ├── __init__.py<br>
+│   │   ├── \_\_init\_\_.py<br>
 │   │   ├── log.py<br>
 │   │   └── user.py<br>
 │   ├── services<br>
@@ -267,7 +268,7 @@ The Backend Code can be grouped the backend code regarding:<br>
 │   │   ├── app_service.py<br>
 │   │   ├── catalogue_service.py<br>
 │   │   ├── db_logger_service.py<br>
-│   │   ├── __init__.py<br>
+│   │   ├── \_\_init\_\_.py<br>
 │   │   ├── log_service.py<br>
 │   │   ├── socketio_service.py<br>
 │   │   └── user_service.py<br>
@@ -278,16 +279,16 @@ The Backend Code can be grouped the backend code regarding:<br>
 │   │   └── swagger.json<br>
 │   ├── utility<br>
 │   │   ├── celery_util.py<br>
-│   │   └── __init__.py<br>
+│   │   └── \_\_init\_\_.py<br>
 │   └── utils<br>
 │       ├── common.py<br>
-│       └── __init__.py<br>
+│       └── \_\_init\_\_.py<br>
 * ***Part III: Init Stuff for websockets and Falsk + logs***<br>
 ├── celery_worker.py<br>
 ├── debug-test.py<br>
 ├── Dockerfile<br>
 ├── entrypoint.sh<br>
-├── __init__.py<br>
+├── \_\_init\_\_.py<br>
 ├── logs<br>
 │   ├── debug.log<br>
 │   ├── error.log<br>
@@ -309,11 +310,11 @@ The Backend Code can be grouped the backend code regarding:<br>
     * Set up local DNS Service (See [Install Bibbox](installation_v4_bibbox_linux))
     * Goto sys-bibbox/frontend 
     * Type `code .` into bash
-    * After vs Code opens type `ng serve` 
+    * After VS Code opens type `ng serve` 
     * Open the link the console shows you (If setup went correctly you should see a Bibbox interface without any errors) 
     * Change any code file and watch it change live in your browser.
 
-* **NOTE**: Prequesite is that the DNS Service and Bibbox installation fully works
+* **NOTE**: Prequesite is that the DNS service and Bibbox installation fully works
 
 
 
