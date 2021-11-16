@@ -213,12 +213,13 @@ Icon of the App in the application store und in the application dashboard. Pleas
 
 Each App should be versioned. We distinguish between
 
-- **Development Version** generated from the master branch of the repository. The developmemt version is identified by the tag `development` in the kit description. 
-
 - **Production Versions** generated from a specific release in the repository. For each major release. i.e. given by a new version of dockerized software tool, a new branch should be generated in the repository. Please note, that the tag name for the Github release should contain the APP version and the BIBBOX APP release (adaption of the APP for BIBBOX). The proposed format is v*APP_verion*_bibboxrel*3 digit bibbox_release_number* e.g. `v8.7.2_bibboxrel001`. 
+The `latest` stable reakease is in the master branch.
+
+- **Development Version** comming soon. Branches and tags not specified in a **kit** can be loaded in a **Developer Mode**. 
 
 
-![GitHub_BiBBox_versioning](images/v4/GitHub_BiBBox_Versioning.png "GitHub Workflow Versioning")
+![GitHub_BiBBox_versioning](images/v4/v4_github_versioning "GitHub Workflow Versioning")
 
 
 When creating a production version, you should make the follwoing steps. Please make it exactly in this order, 
