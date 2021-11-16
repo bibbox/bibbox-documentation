@@ -214,7 +214,7 @@ Icon of the App in the application store und in the application dashboard. Pleas
 Each App should be versioned. We distinguish between
 
 - **Production Versions** generated from a specific release in the repository. For each major release. i.e. given by a new version of dockerized software tool, a new branch should be generated in the repository. Please note, that the tag name for the Github release should contain the APP version and the BIBBOX APP release (adaption of the APP for BIBBOX). The proposed format is v*APP_verion*_bibboxrel*3 digit bibbox_release_number* e.g. `v8.7.2_bibboxrel001`. 
-The `latest` stable reakease is in the master branch.
+The `latest` stable release is in the master branch.
 
 - **Development Version** comming soon. Branches and tags not specified in a **kit** can be loaded in a **Developer Mode**. 
 
