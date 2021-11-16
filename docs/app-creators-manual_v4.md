@@ -219,7 +219,7 @@ The `latest` stable reakease is in the master branch.
 - **Development Version** comming soon. Branches and tags not specified in a **kit** can be loaded in a **Developer Mode**. 
 
 
-![GitHub_BiBBox_versioning](images/v4/v4_github_versioning "GitHub Workflow Versioning")
+![GitHub_BiBBox_versioning](images/v4/v4_github_versioning.png "GitHub Workflow Versioning")
 
 
 When creating a production version, you should make the follwoing steps. Please make it exactly in this order, 
