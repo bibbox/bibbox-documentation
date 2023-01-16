@@ -1,3 +1,5 @@
+[![Docs Badge](https://readthedocs.org/projects/bibbox/badge/?version=latest)](http://bibbox.readthedocs.io/)
+
 # BIBBOX and eB3Kit Dokumentation
 
 The [User Documentation](http://bibbox.readthedocs.io/en/latest/) for BIBBOX and the B3Africa eB3Kit is made by mkdocs, and can be 

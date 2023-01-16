@@ -1,25 +1,15 @@
 site_name: BIBBOX
 
-pages:
+nav:
     - Introduction: index.md
     - Install guide: installation_v4_bibbox_linux.md
-    - User guide:
-        - Install Apps: installation_v4_apps.md
-    - Deveoper guide:
-        - Developers: dev_v4_start.md
-        - Create Apps: app-creators-manual_v4.md
-    - Citation:
-    - License:
-    - V3 - Old Documentation:
-        - Introduction: V3_docs/v3_introduction.md
-        - Installation from image: V3_docs/installation-image.md
-        - Installation from source: V3_docs/installation-source.md
-        - Install Apps: V3_docs/admin-documentation.md
-        - Create Apps: V3_docs/app-creators-manual.md
-        - App install Tutorials:
-            - OpenSpecimen: V3_docs/apptutorials/openspecimen/openspecimen.md
-            - Phenotips: V3_docs/apptutorials/phenotips/phenotips.md
-            - Molgenis: V3_docs/apptutorials/molgenis/molgenis.md
-        - Under the hood: V3_docs/technical.md
+    - User guide: user-guide.md
+    - Developer guide: developer-guide.md
+    - Citation: citation.md
+    - License: license.md
 
-theme: readthedocs
+
+theme: 
+    name: readthedocs
+
+
