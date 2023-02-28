@@ -17,15 +17,13 @@ Run the following commands:
 
 ##### Install Docker Engine, MacOS, Windows
 
-To install the newest docker-engine package follow the install dokumentation on the official docker website. 
+To install the newest docker-engine package follow the [install dokumentation](https://docs.docker.com/engine/install/) on the official docker website. 
 
-[https://docs.docker.com/engine/install/](https://docs.docker.com/engine/install/).
 
 ##### Install docker-compose:
 
-To install the newest docker-compose package follow the install dokumentation on the official docker website.
+To install the newest docker-compose package follow the [install dokumentation](https://docs.docker.com/compose/install/) on the official docker website.
 
-[https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/).
 
 ##### Install the BIBBOX (in the Beta only Debian based Linux Distributions are featured)
 
@@ -34,9 +32,10 @@ Create the bibbox location folder: <br>
 `sudo mkdir bibbox`<br>
 `cd bibbox`<br>
 
-Clone the bibbox system repository to opt bibbox. Therefore change your working directory to /opt/bibbox/ with `cd /opt/bibbox/` and run
+Clone the bibbox system repository to opt bibbox and run the installation script.
 
 `sudo git clone https://github.com/bibbox/sys-bibbox.git`<br>
+`cd sys-bibbox`<br>
 `sudo bash INSTALL.sh`<br>
 
 Warning using INSTALL.sh will reinstall nvm and set the nodejs version used by npm to 14.16.0
