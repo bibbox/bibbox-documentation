@@ -2,7 +2,7 @@
 
 This documentation describes BIBBOX Docker Framework. <br>
 
-* If you already know your way arround Docker and just want to install a local instance on Linux jump to [Install  guide](installation_v4_bibbox_linux)
+* If you already know your way arrund Docker and just want to install a local instance on Linux, jump to [Install  guide](installation_v4_bibbox_linux)
 
 ## Get started
 
@@ -15,7 +15,7 @@ Check out the [User guide](user-guide) for further instructions on how to use th
 
 * How does it work ?
 
-Basically the  BIBBOX itsself consists of a series of docker containers. The basic container strucutre is given by:
+The  BIBBOX itself consists of a series of Docker containers. The basic container structure is given by:
 
 * Apache Proxyserver (Front-End Server and Proxy Server for the Apps)
 * Backend (Flask Rest API for data exchange from Front-End) 
@@ -23,9 +23,9 @@ Basically the  BIBBOX itsself consists of a series of docker containers. The bas
 * Celery (Asynchronous Task scheduling)
 * Redis (Faster data-store for volatile and cache data)
 
-For more information about each container itsself see the [sys-bibbox GitHub](https://github.com/ BIBBOX/sys- BIBBOX) repository.
+For more information about each container, see the [sys-bibbox GitHub](https://github.com/ BIBBOX/sys- BIBBOX) repository.
 
-The detailed documentation is currently under construction and will be subsequently updated see [Developer guide](developer-guide)
+The detailed documentation is currently under construction and will be subsequently updated, see [Developer guide](developer-guide)
 
 
 
