@@ -1,6 +1,6 @@
 [![Docs Badge](https://readthedocs.org/projects/bibbox/badge/?version=latest)](http://bibbox.readthedocs.io/)
 
-# BIBBOX Dokumentation
+# BIBBOX Documentation
 
 The [User Documentation](http://bibbox.readthedocs.io/) for BIBBOX is made by mkdocs, and can be  found @ [bibbox.readthedocs.io](http://bibbox.readthedocs.io/).
 
