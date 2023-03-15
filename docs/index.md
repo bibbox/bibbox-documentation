@@ -8,7 +8,7 @@ This documentation describes BIBBOX Docker Framework. <br>
 
 * What is the BIBBOX Framework ?
 
-The  BIBBOX Framework is a Basic Infrastructure Building Box (BIBBOX), because it was originally targeted towards biobanks it is sometimes also known as a Biobank in a Box. The BIBBOX provides the possibility to create install apps and serve them directly towards the End-User. In the current state we are building apps to support pathologists, bioinformaticians and biobanks in their direct work as well as in Data-Management. The current framework mainly serves as a workflow demo SAAS-System and is not going into a productive state anytime soon. 
+The  BIBBOX Framework is a Basic Infrastructure Building Box (BIBBOX). As it originally targeted biobanks, it might sometimes also be known as a "Biobank in a Box". The BIBBOX provides the possibility to create and install apps, and also serve them directly towards the end-user. In the current state, we are building apps to support pathologists, bioinformaticians and biobanks in their daily work as well as in data management. The current framework mainly serves as a workflow demo SAAS-System and is not going into a productive state anytime soon. 
 
 Check out the [User guide](user-guide) for further instructions on how to use the  BIBBOX.
 
