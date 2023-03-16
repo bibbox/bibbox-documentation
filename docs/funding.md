@@ -19,6 +19,6 @@ The EU-funded CY-BIOBANK project is helping Cyprus significantly enhance its rep
 - <a href="http://bbmri.at/" target="_blank">BBMRI.at</a>
 
 <div style="text-align: right">
-<a href="https://heap-exposome.eu/" target="_blank"><img src="images/logos/heap.png" alt= "HEAP" width="200" height="200"></a>
-<a href="https://cordis.europa.eu/project/id/857122" target="_blank"><img src="images/logos/cy-biobank.png" alt= "CY-Biobank" width="200" height="200"></a>
+<a href="https://heap-exposome.eu/" target="_blank"><img src="../images/logos/heap.png" alt= "HEAP" width="200" height="200"></a>
+<a href="https://cordis.europa.eu/project/id/857122" target="_blank"><img src="../images/logos/cy-biobank.png" alt= "CY-Biobank" width="200" height="200"></a>
 </div>
