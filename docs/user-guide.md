@@ -10,7 +10,7 @@ By clicking onto the [Store](https://demo.bibbox.org/applications)-Button on top
 
 ![App Store](images/v4/v4_interface_appstore.png)
 
-To learn more about installing an App goto [Install Apps](installation_v4_apps)
+To learn more about installing an App goto [Install Apps](#install-apps)
 
 Clicking onto the Instances-Button will take you to the currently installed instances.
 
