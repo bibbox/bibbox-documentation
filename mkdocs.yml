@@ -6,10 +6,11 @@ pages:
     - User guide: user-guide.md
     - Developer guide: developer-guide.md
     - Citation: citation.md
+    - Funding: funding.md
     - License: license.md
-
 
 theme: 
     name: readthedocs
+
 
 
