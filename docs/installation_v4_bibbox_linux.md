@@ -17,12 +17,12 @@ Run the following commands:
 
 ##### Install Docker Engine, MacOS, Windows
 
-To install the newest docker-engine package follow the [install dokumentation](https://docs.docker.com/engine/install/) on the official docker website. 
+To install the newest docker-engine package follow the <a href="https://docs.docker.com/engine/install/" target="_blank">install dokumentation</a> on the official docker website. 
 
 
 ##### Install docker-compose:
 
-To install the newest docker-compose package follow the [install dokumentation](https://docs.docker.com/compose/install/) on the official docker website.
+To install the newest docker-compose package follow the <a href="https://docs.docker.com/engine/install/" target="_blank">install dokumentation</a> on the official docker website.
 
 
 ##### Install the BIBBOX (in the Beta only Debian based Linux Distributions are featured)
@@ -52,7 +52,7 @@ Specify domainname + TLD (e.g. silicolabv4.bibbox.org):
 you either: 
 
 * Have to enter an existing domain forwarding requests towards the machine your Bibbox is running on (and forward all Suburls aka: add  ServerAlias \*.your.domain.com to your Host config).
-* Add the URL you want to use locally to your /etc/hosts file (see [edit Hosts file](https://linuxize.com/post/how-to-edit-your-hosts-file/)) which will only allow you to see the Bibbox Frontend. App usage and installation won't work. 
+* Add the URL you want to use locally to your /etc/hosts file (see <a href="https://linuxize.com/post/how-to-edit-your-hosts-file/" target="_blank">edit Hosts file</a>) which will only allow you to see the Bibbox Frontend. App usage and installation won't work. 
 * Best Option: Set up a DNS Service (e.g.:dnsmasque) to create a local domain to resolve your requests towards the internal Proxy-Server operated by the bibbox
 
 As you may noted is is necccesary to forward all suburls towards the url you chose as well. This is neccesary since once you install an app it will be given an specific suburl or range of suburls where its Front-End will be reachable.
@@ -184,5 +184,5 @@ Address: 127.0.0.1
 ```
 
 * NOTE: Of course you can choose any domain-name you like. Just be shure to change `bibbox.local.test` to the desired domain-name.
-* [https://www.tecmint.com/setup-a-dns-dhcp-server-using-dnsmasq-on-centos-rhel/](https://www.tecmint.com/setup-a-dns-dhcp-server-using-dnsmasq-on-centos-rhel/) has more info on the topic
+* <a href="https://www.tecmint.com/setup-a-dns-dhcp-server-using-dnsmasq-on-centos-rhel/" target="_blank">https://www.tecmint.com/setup-a-dns-dhcp-server-using-dnsmasq-on-centos-rhel/</a> has more info on the topic
 * As always Google is your Friend. Simply Type any Error message you receive into the search bar.

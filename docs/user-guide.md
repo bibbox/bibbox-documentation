@@ -6,7 +6,7 @@ The first page of the BIBBOX shows you the store of available Apps.
 
 ![Starting Screen](images/v4/v4_interface_startscreen.png)
 
-By clicking onto the [Store](https://demo.bibbox.org/applications)-Button on top you will get to the app overview. 
+By clicking onto the <a href="https://demo.bibbox.org/applications" target="_blank">Store</a>-Button on top you will get to the app overview. 
 
 ![App Store](images/v4/v4_interface_appstore.png)
 
@@ -44,7 +44,7 @@ As this might is not enough one can conveniently access the system logs from the
 Each log can be expanded by clicking on it and shows the logs that are recorded by each individual docker container
 
 * NOTE: This is also the fastest way to figure out the main structure of the  BIBBOX system
-* NOTE: What is logged exactly is configured in the Docker Container definitions and can be found within the Dockerfiles within the GitHub repository ([apacheproxy/](https://github.com/bibbox/sys-bibbox/tree/master/apacheproxy) as an example for the Apache Proxy Server container)
+* NOTE: What is logged exactly is configured in the Docker Container definitions and can be found within the Dockerfiles within the GitHub repository (<a href="https://github.com/bibbox/sys-bibbox/tree/master/apacheproxy" target="_blank">apacheproxy/</a> as an example for the Apache Proxy Server container)
 
 As the information provided by the logs is sometimes not enough each App can be troubleshot in more detail by visiting the Dashboard (it can be accesed in the Instances Tab)
 
@@ -73,12 +73,12 @@ Once you selected an app by clicking on its icon you will see a new window pop u
 ![Install Step I](images/v4/v4_install_screen_1.png)
 
 After this click Install as shown on top of the image above. Next you will have to fill the parameters neccesary to actually run the app.<br>
-The parameters themselves can be checked at the App's GitHub repository. In the example the selected App is [Omero](https://www.openmicroscopy.org/omero/).<br>
+The parameters themselves can be checked at the App's GitHub repository. In the example the selected App is <a href="https://www.openmicroscopy.org/omero/" target="_blank">Omero</a>.<br>
 After clicking onto Install you will be taken to the parameter setting screen:
 
 ![Install Step II](images/v4/v4_install_screen_2.png)
 
-To get to the GitHub repository outlining the parameters go to: [app-omero](https://github.com/bibbox/app-omero/tree/v5-6-x)
+To get to the GitHub repository outlining the parameters go to: <a href="https://github.com/bibbox/app-omero/tree/v5-6-x" target="_blank">app-omero</a>
 
 
 
