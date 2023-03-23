@@ -23,11 +23,7 @@ The  BIBBOX itself consists of a series of Docker containers. The basic containe
 * Celery (Asynchronous Task scheduling)
 * Redis (Faster data-store for volatile and cache data)
 
-<<<<<<< Updated upstream
 For more information about each container, see the <a href="https://github.com/bibbox/sys-bibbox" target="_blank">sys-bibbox GitHub</a> repository.
-=======
-For more information about each container itsself see the <a href="https://github.com/bibbox/sys-bibbox" target="_blank">sys-bibbox GitHub</a> repository.
->>>>>>> Stashed changes
 
 The detailed documentation is currently under construction and will be subsequently updated, see [Developer guide](developer-guide)
 
