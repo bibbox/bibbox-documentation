@@ -8,7 +8,7 @@ Basically the  BIBBOX itsself consists of a series of docker containers. The bas
 * Celery (Asynchronous Task scheduling)
 * Redis (Faster data-store for volatile and cache data)
 
-For more information about each container itsself see the sys-bibbox GitHub repository at [sys-bibbox](https://github.com/bibbox/sys-bibbox)
+For more information about each container itsself see the sys-bibbox GitHub repository at <a href="https://github.com/bibbox/sys-bibbox" target="_blank">sys-bibbox</a>.
 
 
 ## Developer Documentation
@@ -18,20 +18,20 @@ For more information about each container itsself see the sys-bibbox GitHub repo
 The  BIBBOX docker system can mainly be divided into 3 parts:
 
 * **Front End**
-    * Angular Front End (Precompiled and mounted within the proxy container [frontend](https://github.com/bibbox/sys-bibbox/tree/master/frontend)) 
+    * Angular Front End (Precompiled and mounted within the proxy container <a href="https://github.com/bibbox/sys-bibbox/tree/master/frontend" target="_blank">frontend</a>) 
 
 * **Back End**
-    * Flask Backend container ([ackend](https://github.com/bibbox/sys-bibbox/tree/master/backend))
-    * Celery Container ([backend](https://github.com/bibbox/sys-bibbox/tree/master/backend) Celery and backend use the same Docker image)
-    * Postgres DB ([postgresql](https://github.com/bibbox/sys-bibbox/blob/master/postgresql/Dockerfile))
+    * Flask Backend container (<a href="https://github.com/bibbox/sys-bibbox/tree/master/backend" target="_blank">backend</a>)
+    * Celery Container (<a href="https://github.com/bibbox/sys-bibbox/tree/master/backend" target="_blank">backend</a>) Celery and backend use the same Docker image)
+    * Postgres DB (<a href="https://github.com/bibbox/sys-bibbox/blob/master/postgresql" target="_blank">postgresql</a>)
     * Redis Data Store (Official Redis Docker image. Used by Celery as cache store)
     * Adminer (Official Docker image for DB debugging)
     * Celery Monitor (Celery container with Frotnend to debug asynchronous tasks)
     * cadvisor (Monitoring for the complete docker-compose bibbox chain)
 
-* **Apacheproxy** (Main linking centerpoint [apacheproxy](https://github.com/bibbox/sys-bibbox/tree/master/apacheproxy))
+* **Apacheproxy** (Main linking centerpoint <a href="https://github.com/bibbox/sys-bibbox/tree/master/apacheproxy" target="_blank">apacheproxy</a>)
 
-To get an idea how this works in an easier fashion you can have a look at [Angular-Flask-Docker-Skeleton](https://github.com/mrsan22/Angular-Flask-Docker-Skeleton), which served as base for the work done on the  BIBBOX docker framework. The nginx implementation was replaced by Apache since this offered a more convenient workflow.
+To get an idea how this works in an easier fashion you can have a look at <a href="https://github.com/mrsan22/Angular-Flask-Docker-Skeleton" target="_blank">Angular-Flask-Docker-Skeleton</a>, which served as base for the work done on the  BIBBOX docker framework. The nginx implementation was replaced by Apache since this offered a more convenient workflow.
 
 #### Prequisites
 
@@ -43,7 +43,7 @@ The following applications need to be installed or are installed using the INSTA
 
 #### Front-End Details
 
-* The Frontend is angular based and uses the ngrx-store principle to achieve the desired functionality ([https://ngrx.io/guide/store](https://ngrx.io/guide/store)).
+* The Frontend is angular based and uses the ngrx-store principle to achieve the desired functionality (<a href="https://ngrx.io/guide/store" target="_blank">https://ngrx.io/guide/store</a>).
 **Code Structure:**
 * ***Part I: Everything visible in the Frontend is a component uses functions defined in the ngrx store part.***<br>
 sys-bibbox/frontend/src<br>
@@ -189,7 +189,7 @@ sys-bibbox/frontend/src<br>
 │           ├── validator.service.spec.ts<br>
 │           └── validator.service.ts<br>
 ├── app.config.ts (created by Angular CLI) <br> 
-***Note that this exactly resembels the structure given in the NGRx tutorial ([https://ngrx.io/guide/store](https://ngrx.io/guide/store)).***<br>
+***Note that this exactly resembels the structure given in the NGRx tutorial (<a href="https://ngrx.io/guide/store" target="_blank">https://ngrx.io/guide/store</a>).***<br>
 * ***Part III images and build environments*** <br>
 ├── assets<br>
 │   ├── announced.png<br>
@@ -228,7 +228,7 @@ sys-bibbox/frontend/src<br>
 **Front end TODO'S**:
 
 * Authentication for users; 
-    * See tutorial here [authentication-in-angular-with-ngrx/](https://mherman.org/blog/authentication-in-angular-with-ngrx/)
+    * See tutorial here <a href="https://mherman.org/blog/authentication-in-angular-with-ngrx/" target="_blank">authentication-in-angular-with-ngrx</a>
 * Styling
 
 #### Back-End Details
@@ -319,7 +319,7 @@ The Backend code can be grouped the backend code regarding:<br>
 
 * **Easiset way (Linux Debian based):**<br> 
     * Install  BIBBOX locally under linux (See [Install  BIBBOX](installation_v4_bibbox_linux))
-    * Install an IDE (e.g [VSCode](https://code.visualstudio.com/download))
+    * Install an IDE (e.g <a href="https://code.visualstudio.com/download" target="_blank">VSCode</a>)
     * Set up local DNS Service (See [Install  BIBBOX](installation_v4_bibbox_linux))
     * Goto sys-bibbox/frontend 
     * Type `code .` into bash
@@ -338,7 +338,7 @@ Contact [Heimo Müller](mailto:heimo.mueller@medunigraz.at), [Emilian Jungwirth]
 ### Anatomy of an App
 
 An **App** is described within a BIBBOX GitHub repository. By convention the name of the repository starts with the prefix **"app-"**
-A template repository can be found at:  <https://github.com/bibbox/app-template>
+A template repository can be found at:  <a href="https://github.com/bibbox/app-template" target="_blank">https://github.com/bibbox/app-template</a>
 
 
 An **App** consists at least of the following files and directories, please never change the name of these files!
@@ -353,7 +353,7 @@ An **App** consists at least of the following files and directories, please neve
 
 #### README.md
 
-The default Github readme file shoud contain information about the used official docker images and docker images from the [BIBBOX dockerhub](https://hub.docker.com/r/bibbox/). In addition you should describe all mounted volumes and their content.
+The default Github readme file shoud contain information about the used official docker images and docker images from the <a href="https://hub.docker.com/r/bibbox/" target="_blank">BIBBOX dockerhub/</a>. In addition you should describe all mounted volumes and their content.
 
   
 #### INSTALL-APP.md
@@ -507,7 +507,7 @@ A list of commands to be run when installing an app, consisting of three categor
 | script_replace | WIP - specifies files/directories where placeholders etc. should be replaced by a script |
 | permissions | specifies which files/folders in the instance directory should be set to which permissions. \n the path is always relative to the instance directory|    
 
-Tool for calculating permissions: https://chmod-calculator.com/
+Tool for calculating permissions: <a href="https://chmod-calculator.com/" target="_blank">https://chmod-calculator.com/</a>
 
 structure:
 ``` json
@@ -577,10 +577,10 @@ the tags for the docker images. Please note, that ALL used images should be tagg
 
 For the registration of an App two configuration files have to be extended:
 
-- [applications.json](https://github.com/bibbox/application-store/blob/master/applications.json) maps a Github repository to a human readable name of the App 
+- <a href="https://github.com/bibbox/application-store/blob/master/applications.json" target="_blank">applications.json/</a> maps a Github repository to a human readable name of the App 
 
 
-- [bibbox.json](https://github.com/bibbox/application-store/blob/master/bibbox.json) puts the App into a specific **kit**. A **kit** defines ta group of Apps together with metadata, which are then displayed in the App store and can be installed in a BIBBOX instance. 
+- <a href="https://github.com/bibbox/application-store/blob/master/bibbox.json" target="_blank">bibbox.json/</a> puts the App into a specific **kit**. A **kit** defines ta group of Apps together with metadata, which are then displayed in the App store and can be installed in a BIBBOX instance. 
 
 
 
