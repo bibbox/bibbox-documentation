@@ -1,6 +1,6 @@
 #  BIBBOX System
 
-This documentation describes BIBBOX Docker Framework! <br>
+This documentation describes BIBBOX Docker Framework. <br>
 
 * If you already know your way around Docker and just want to install a local instance on Linux, jump to [Install  guide](installation_v4_bibbox_linux)
 
