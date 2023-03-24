@@ -1,6 +1,6 @@
 ## Initial Setup Debian based LINUX
  
-To install and use the bibbox software please follow these instructions:
+To install and use the BIBBOX software please follow these instructions:
 
 ##### Install Docker Engine, Git and prepatory Steps, Linux
 
@@ -184,5 +184,5 @@ Address: 127.0.0.1
 ```
 
 * NOTE: Of course you can choose any domain-name you like. Just be shure to change `bibbox.local.test` to the desired domain-name.
-* <a href="https://www.tecmint.com/setup-a-dns-dhcp-server-using-dnsmasq-on-centos-rhel/" target="_blank">https://www.tecmint.com/setup-a-dns-dhcp-server-using-dnsmasq-on-centos-rhel/</a> has more info on the topic
+* <a href="https://www.tecmint.com/setup-a-dns-dhcp-server-using-dnsmasq-on-centos-rhel/" target="_blank">setup a dns-dhcp-server/</a> has more info on the topic
 * As always Google is your Friend. Simply Type any Error message you receive into the search bar.

@@ -22,12 +22,12 @@ The  BIBBOX docker system can mainly be divided into 3 parts:
 
 * **Back End**
     * Flask Backend container (<a href="https://github.com/bibbox/sys-bibbox/tree/master/backend" target="_blank">backend</a>)
-    * Celery Container (<a href="https://github.com/bibbox/sys-bibbox/tree/master/backend" target="_blank">backend</a>) Celery and backend use the same Docker image)
+    * Celery Container (<a href="https://github.com/bibbox/sys-bibbox/tree/master/backend" target="_blank">Celery and backend</a>  use the same Docker image)
     * Postgres DB (<a href="https://github.com/bibbox/sys-bibbox/blob/master/postgresql" target="_blank">postgresql</a>)
-    * Redis Data Store (Official Redis Docker image. Used by Celery as cache store)
-    * Adminer (Official Docker image for DB debugging)
-    * Celery Monitor (Celery container with Frotnend to debug asynchronous tasks)
-    * cadvisor (Monitoring for the complete docker-compose bibbox chain)
+    * Redis Data Store (Official <a href="https://hub.docker.com/_/redis" target="_blank">Redis Docker image</a>. Used by Celery as cache store)
+    * Adminer (Official <a href="https://hub.docker.com/_/adminer" target="_blank">Adminer Docker image</a> for DB debugging)
+    * Celery Monitor (<a href="https://github.com/bibbox/sys-bibbox/tree/master/backend" target="_blank">Celery</a> container with Frotnend to debug asynchronous tasks)
+    * cadvisor (<a href="https://console.cloud.google.com/gcr/images/cadvisor" target="_blank">cadvisor</a> monitoring for the complete docker-compose bibbox chain)
 
 * **Apacheproxy** (Main linking centerpoint <a href="https://github.com/bibbox/sys-bibbox/tree/master/apacheproxy" target="_blank">apacheproxy</a>)
 
@@ -507,7 +507,7 @@ A list of commands to be run when installing an app, consisting of three categor
 | script_replace | WIP - specifies files/directories where placeholders etc. should be replaced by a script |
 | permissions | specifies which files/folders in the instance directory should be set to which permissions. \n the path is always relative to the instance directory|    
 
-Tool for calculating permissions: <a href="https://chmod-calculator.com/" target="_blank">https://chmod-calculator.com/</a>
+Tool for calculating permissions: <a href="https://chmodcommand.com/" target="_blank">chmod-calculator</a>
 
 structure:
 ``` json
