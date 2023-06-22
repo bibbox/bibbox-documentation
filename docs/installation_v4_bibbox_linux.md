@@ -64,7 +64,7 @@ For example one could use dnsmasq to accomplish the goal stated above.
 * Install dnsmasq:<br>
 `sudo apt-get install dnsmasq`
 * Configure dnsmasq:<br>
-First of all lets backup the default condifuration file dnsmasq creates.<br>
+First of all lets backup the default configuration file dnsmasq creates.<br>
 `sudo cp /etc/dnsmasq.conf /etc/dnsmasq.conf.orig`<br>
 Next we have to create a config file for dnsmasq:<br>
 `sudo nano /etc/dnsmasq.conf`<br>
