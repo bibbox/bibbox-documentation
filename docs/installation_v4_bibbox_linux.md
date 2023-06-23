@@ -9,15 +9,15 @@ To install and use the BIBBOX software please follow these instructions:
 Run the following commands:
 ```
 sudo apt-get update
-sudo apt -y install docker.io
-sudo apt install git -y
+sudo apt install docker.io -y
 sudo apt-get install docker.io -y
+sudo apt-get install docker-compose-plugin -y
+sudo apt-get install dnsmasq -y
+sudo apt install git -y
 sudo docker network create bibbox-default-network
 sudo groupadd docker
 sudo usermod -aG docker $USER
 newgrp docker
-sudo apt-get install docker-compose-plugin
-sudo apt-get install dnsmasq
 ```
 Dnsmasq is used to create a local domain to resolve your requests towards the internal Proxy-Server operated by the bibbox. Otherwise installation and app usage will not work.
 
