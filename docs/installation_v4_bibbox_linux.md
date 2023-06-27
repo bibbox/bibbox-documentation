@@ -11,7 +11,7 @@ Run the following commands:
 sudo apt-get update
 sudo apt install docker.io -y
 sudo apt-get install docker.io -y
-sudo apt-get install docker-compose-plugin -y
+sudo apt-get install docker-compose -y
 sudo apt-get install dnsmasq -y
 sudo apt install git -y
 sudo docker network create bibbox-default-network
