@@ -70,7 +70,7 @@ nameserver 127.0.0.1
 
 As the warning states to make this changes permanent we would have to add write protection towards this file:<br>
 ```
-sudo chmod 555 /etc/resolv.conf
+sudo chmod 544 /etc/resolv.conf
 ```
 
 Adding `dnsmasq` to your hosts file, since all the information about DNS-Hosts will be read from there:<br>
@@ -156,4 +156,22 @@ When asked for a domain name we will use the one we created above: <br>
 ```
 Specify domainname + TLD (e.g. silicolabv4.bibbox.org):
 ```
+
+### Post-installation temporary fix to make it work:
+After bibbox is up and running, if you encounter the error 'Service unavailable' when trying to login follow the following steps:
+First make sure you are in the sys-bibbox folder, **if not then run**:
+```
+cd /opt/bibbox/sys-bibbox
+```
+If you are already in the bibbox folder:
+```
+docker-compose down
+sudo sed -i '19,20s/^/# /' .env
+docker-compose up -d
+```
+Afterwards everything should be working as intended.
+
+Thank you and have a nice day!
+
+
 
