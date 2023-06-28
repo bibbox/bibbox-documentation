@@ -157,18 +157,6 @@ When asked for a domain name we will use the one we created above: <br>
 Specify domainname + TLD (e.g. silicolabv4.bibbox.org):
 ```
 
-### Post-installation temporary fix to make it work:
-After bibbox is up and running, if you encounter the error 'Service unavailable' when trying to login follow the following steps:
-First make sure you are in the sys-bibbox folder, **if not then run**:
-```
-cd /opt/bibbox/sys-bibbox
-```
-If you are already in the bibbox folder:
-```
-docker-compose down
-sudo sed -i '19,20s/^/# /' .env
-docker-compose up -d
-```
 Afterwards everything should be working as intended.
 
 Thank you and have a nice day!
