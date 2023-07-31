@@ -12,7 +12,6 @@ sudo apt-get update
 sudo apt install docker.io -y
 sudo apt-get install docker.io -y
 sudo apt-get install docker-compose -y
-sudo apt-get install dnsmasq -y
 sudo apt install git -y
 sudo docker network create bibbox-default-network
 sudo groupadd docker
@@ -21,79 +20,77 @@ newgrp docker
 ```
 Dnsmasq is used to create a local domain to resolve your requests towards the internal Proxy-Server operated by the bibbox. Otherwise installation and app usage will not work.
 
-### DNS service setup
+### DNS service setup for UBUNTU 20+, These steps will replace your current systemd-resolved with dnsmasq.
+Note: if you do something wrong your internet will not work anymore.
 
 #### Configuring dnsmasq:<br>
 Backing up the default configuration file dnsmasq creates:
 ```
 sudo cp /etc/dnsmasq.conf /etc/dnsmasq.conf.orig
 ```
-Editing the dnsmasq config file:
+<br>Uninstall `systemd-resolved` package. It isn’t necessary to have.
 ```
-sudo nano /etc/dnsmasq.conf
+sudo systemctl disable systemd-resolved
+sudo systemctl stop systemd-resolved
+sudo apt purge systemd-resolved
 ```
-If you for example choose `bibbox.local.test` as the domain name the contents of this file will look like:
+<br>Disable dnsmasq in the `/etc/NetworkManager/NetworkManager.conf`. Also, ensure to have the `dns=none` line:
+```
+[main]
+dns=none
+plugins=ifupdown,keyfile
 
+[ifupdown]
+managed=false
+
+[device]
+wifi.scan-rand-mac-address=no
 ```
+<br>Restart NetworkManager:
+```
+sudo systemctl restart NetworkManager
+```
+<br>Remove the current `/etc/resolv.conf` file and install dnsmasq:
+```
+unlink /etc/resolv.conf
+sudo apt-get install dnsmasq -y
+```
+<br>Config your upstream dns:
+```
+echo "nameserver 1.1.1.1" | sudo tee /etc/resolv.dnsmasq
+echo "nameserver 8.8.8.8" | sudo tee -a /etc/resolv.dnsmasq
+```
+<br>Config your `dnsmasq.conf` file. Use a cache-size parameter.
+If you for example choose `bibbox.local.test` as the domain name the contents of this file will look like:
+```
+sudo tee /etc/dnsmasq.conf << EOF
 listen-address=127.0.0.1
 expand-hosts
 domain=bibbox.local.test
-server=8.8.8.8
-server=8.8.4.4
 address=/bibbox.local.test/127.0.0.1
+resolv-file=/etc/resolv.dnsmasq
+cache-size=2048
+EOF
 ```
-
-* The `server=` parts are there to allow traffic not directed at our domain to be resolved to an public DNS server (googles DNS server in this case)
-  
-Testing if everything is fine:<br>
+<br>Use the dnsmasq as main dns provider:
+```
+echo "nameserver 127.0.0.1" | sudo tee /etc/resolv.conf
+```
+<br>Testing if everything is fine:
 ```
 dnsmasq --test
 ```
-
-If you get the following answer everything is good, if not there is a mistake in `dnsmasq.conf`:<br>  
-
-`dnsmasq: syntax check OK`
-
-In order to make the computer use the created DNS-Server, we need to set the namespace to the IP-Adress we provided in `listen-address`.<br> 
+If you get the following answer everything is good: `dnsmasq: syntax check OK`, if not there is a mistake in `dnsmasq.conf`.<br>
+<br>Restart dnsmasq service
 ```
-sudo nano /etc/resolv.conf
+systemctl restart dnsmasq
+systemctl enable dnsmasq
 ```
-We replace the line:<br>
-```
-nameserver 127.0.0.53
-```
-with
-```
-nameserver 127.0.0.1
-```
-* NOTE: There could be more `nameserver=` directives present. In order for dnsmasq to work, all of those need to be commented out with an `\#` in front of them.
-
-As the warning states to make this changes permanent we would have to add write protection towards this file:<br>
-```
-sudo chmod 544 /etc/resolv.conf
-```
-
-Adding `dnsmasq` to your hosts file, since all the information about DNS-Hosts will be read from there:<br>
-```
-sudo nano /etc/hosts
-```
-
-Add this line: <br> 
-```
-127.0.0.1	dnsmasq
-```
-
-Restart the dnsmasq service for all changes to take effect:
-```
-sudo systemctl restart dnsmasq
-```
-
-Testing the newly created domain:
+<br>Testing the newly created domain:
 ```
 dig bibbox.local.test
 ```
-Output should look like in the example bellow; if it's working it will have an `ANSWER SECTION`
-
+<br>Output should look like in the example bellow; if it's working it will have an `ANSWER SECTION`
 ```
 ; <<>> DiG 9.16.1-Ubuntu <<>> bibbox.local.test
 ;; global options: +cmd
@@ -114,12 +111,11 @@ bibbox.local.test.	0	IN	A	127.0.0.1
 ;; WHEN: Di Okt 19 14:23:19 CEST 2021
 ;; MSG SIZE  rcvd: 62
 ```
-
-We can also use:
+<br>We can also use:
 ```
 nslookup bibbox.local.test
 ```
-Output should look like:
+<br>Output should look like:
 ```
 Server:		127.0.0.1
 Address:	127.0.0.1#53
@@ -127,8 +123,7 @@ Address:	127.0.0.1#53
 Name:	bibbox.local.test
 Address: 127.0.0.1
 ```
-
-* NOTE: The domain used here `bibbox.local.test` is just an example. You can use a domain name of your choice.
+<br>* NOTE: The domain used here `bibbox.local.test` is just an example. You can use a domain name of your choice.
 * For more information about the topic visit: <a href="https://www.tecmint.com/setup-a-dns-dhcp-server-using-dnsmasq-on-centos-rhel/" target="_blank">setup a dns-dhcp-server/</a>
 
 ## Install the BIBBOX (in the Beta only Debian based Linux Distributions are featured)
@@ -139,7 +134,7 @@ cd /opt
 sudo mkdir bibbox
 cd bibbox
 ```
-**Clone the bibbox system repository to opt bibbox and run the installation script.**
+<br>**Clone the bibbox system repository to opt bibbox and run the installation script.**
 ```
 sudo git clone https://github.com/bibbox/sys-bibbox.git
 cd sys-bibbox
@@ -147,19 +142,15 @@ cd sys-bibbox
 ```
 sudo bash INSTALL.sh
 ```
-
-Warning using INSTALL.sh will reinstall nvm and set the nodejs version used by npm to 14.16.0
+<br>Warning using INSTALL.sh will reinstall nvm and set the nodejs version used by npm to 14.16.0
 
 ### URL/Domain-Settings
-
-When asked for a domain name we will use the one we created above: <br>
+<br>When asked for a domain name we will use the one we created above: <br>
 ```
 Specify domainname + TLD (e.g. silicolabv4.bibbox.org):
 ```
-
-Afterwards everything should be working as intended.
-
-Thank you and have a nice day!
+<br>Afterwards everything should be working as intended.<br>
+<br>Thank you and have a nice day!
 
 
 
