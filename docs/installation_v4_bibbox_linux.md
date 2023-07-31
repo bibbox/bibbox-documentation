@@ -24,13 +24,14 @@ Dnsmasq is used to create a local domain to resolve your requests towards the in
 Note: if you do something wrong your internet will not work anymore.
 
 #### Installing and configuring dnsmasq:<br>
-<br>Uninstall `systemd-resolved` package. It isn’t necessary to have.
+Uninstall `systemd-resolved` package. It isn’t necessary to have.
 ```
 sudo systemctl disable systemd-resolved
 sudo systemctl stop systemd-resolved
 sudo apt purge systemd-resolved
 ```
-<br>Disable dnsmasq in the `/etc/NetworkManager/NetworkManager.conf`. Also, ensure to have the `dns=none` line:
+<br>Disable dnsmasq in the `/etc/NetworkManager/NetworkManager.conf`. Also, ensure to have the `dns=none` line:<br> `sudo nano /etc/NetworkManager/NetworkManager.conf`
+
 ```
 [main]
 dns=none
@@ -83,8 +84,8 @@ dnsmasq --test
 If you get the following answer everything is good: `dnsmasq: syntax check OK`, if not there is a mistake in `dnsmasq.conf`.<br>
 <br>Restart dnsmasq service
 ```
-systemctl restart dnsmasq
-systemctl enable dnsmasq
+sudo systemctl restart dnsmasq
+sudo systemctl enable dnsmasq
 ```
 <br>Testing the newly created domain:
 ```
