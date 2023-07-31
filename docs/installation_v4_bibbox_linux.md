@@ -23,11 +23,7 @@ Dnsmasq is used to create a local domain to resolve your requests towards the in
 ### DNS service setup for UBUNTU 20+, These steps will replace your current systemd-resolved with dnsmasq.
 Note: if you do something wrong your internet will not work anymore.
 
-#### Configuring dnsmasq:<br>
-Backing up the default configuration file dnsmasq creates:
-```
-sudo cp /etc/dnsmasq.conf /etc/dnsmasq.conf.orig
-```
+#### Installing and configuring dnsmasq:<br>
 <br>Uninstall `systemd-resolved` package. It isn’t necessary to have.
 ```
 sudo systemctl disable systemd-resolved
@@ -59,6 +55,10 @@ sudo apt-get install dnsmasq -y
 ```
 echo "nameserver 1.1.1.1" | sudo tee /etc/resolv.dnsmasq
 echo "nameserver 8.8.8.8" | sudo tee -a /etc/resolv.dnsmasq
+```
+<br>Backing up the default configuration file dnsmasq creates:
+```
+sudo cp /etc/dnsmasq.conf /etc/dnsmasq.conf.orig
 ```
 <br>Config your `dnsmasq.conf` file. Use a cache-size parameter.
 If you for example choose `bibbox.local.test` as the domain name the contents of this file will look like:
