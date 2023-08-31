@@ -317,7 +317,7 @@ The Backend code can be grouped the backend code regarding:<br>
 
 #### Set up Front-End Developement environment
 
-* **Easiset way (Linux Debian based):**<br> 
+* **Easiest way (Linux Debian based):**<br> 
     * Install  BIBBOX locally under linux (See [Install  BIBBOX](installation_v4_bibbox_linux))
     * Install an IDE (e.g <a href="https://code.visualstudio.com/download" target="_blank">VSCode</a>)
     * Set up local DNS Service (See [Install  BIBBOX](installation_v4_bibbox_linux))
