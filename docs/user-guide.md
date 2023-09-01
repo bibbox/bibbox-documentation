@@ -2,11 +2,11 @@
 
 ## User guide
 
-The first page of the BIBBOX shows you the store of available Apps.
+The first page of the BIBBOX shows you the landing page and give you the opportunity to sign in.
 
 ![Starting Screen](images/v4/v4_interface_startscreen.png)
 
-By clicking onto the <a href="https://demo.bibbox.org/applications" target="_blank">Store</a>-Button on top you will get to the app overview. 
+By clicking onto the <a href="https://demo.bibbox.org/applications" target="_blank">Store</a>-Button on top you will get to the App overview. 
 
 ![App Store](images/v4/v4_interface_appstore.png)
 
@@ -20,10 +20,10 @@ Clicking onto the Instances-Button will take you to the currently installed inst
 
 The screen shows the currently installed instances and offers more possibilities. You can:
 
-* Call the Apps UI via the switch button on the top left of the apps tile
+* Call the Apps UI via the switch button on the top left of the Apps tile
 * See the Apps dashboard by clicking the gear symbol on the bottom left of the Apps tile
-* Call the logs of the singular Docker containers by clicking the book symbol in the bottom-middle of the apps tile
-* The light signifies the status of the app - Green: Running; Yellow: Installing; Red: Stopped
+* Call the logs of the singular Docker containers by clicking the book symbol in the bottom-middle of the Apps tile
+* The light signifies the status of the App - Green: Running; Yellow: Installing; Red: Stopped
 
 You might noticed, that on all screens there is a little green hook on the very top right of the page. This is a short link to the last page of the third page of top navigation bar: The activity menu. 
 
@@ -50,29 +50,29 @@ As the information provided by the logs is sometimes not enough each App can be 
 
 ![Dashboard](images/v4/v4_interface_app_dashboard.png)
 
-* NOTE: The most important part is the possibility to stop or restart apps.
-* NOTE: Once an app has been stoped the button turns towards delete. THIS IS THE ONLY WAY TO DELETE APPS
-* Additionally we can enter or read descriptions that are shown within the apps tile at the Instances tab. Further we can see all the available URL's for the given app. For example some apps include additional tools for debuging or advacned form of integration. An example would be an additional Adminer service that can be accesed to see the database.
+* NOTE: The most important part is the possibility to stop or restart Apps.
+* NOTE: Once an App has been stoped the button turns towards delete. THIS IS THE ONLY WAY TO DELETE APPS
+* Additionally we can enter or read descriptions that are shown within the Apps tile at the Instances tab. Further we can see all the available URL's for the given App. For example some Apps include additional tools for debuging or advacned form of integration. An example would be an additional Adminer service that can be accesed to see the database.
 
 Last we can also access the App-Container Docker logs from the Dashboard or via the Apps tile from the Instances tab (book symbol see Instances tab above). 
 
 ![App-Logs](images/v4/v4_interface_app_logs.png)
 
-Here we can see a more detailed log of every container that is contributing to the given app. 
+Here we can see a more detailed log of every container that is contributing to the given App. 
 
 ## Install Apps
 
 Apps can be installed from the Store page.
 
-* NOTE: After first installation of the framework the system automatically fetches the list of available apps this can take a few moments.
+* NOTE: After first installation of the framework the system automatically fetches the list of available Apps this can take a few moments.
 
 ![Installable Apps](images/v4/v4_install_testapps.png)
 
-Once you selected an app by clicking on its icon you will see a new window pop up. Since there can be different versions of an App available you have to select your version
+Once you selected an App by clicking on its icon you will see a new window pop up. Since there can be different versions of an App available you have to select your version
 
 ![Install Step I](images/v4/v4_install_screen_1.png)
 
-After this click Install as shown on top of the image above. Next you will have to fill the parameters neccesary to actually run the app.<br>
+After this click Install as shown on top of the image above. Next you will have to fill the parameters neccesary to actually run the App.<br>
 The parameters themselves can be checked at the App's GitHub repository. In the example the selected App is <a href="https://www.openmicroscopy.org/omero/" target="_blank">Omero</a>.<br>
 After clicking onto Install you will be taken to the parameter setting screen:
 
