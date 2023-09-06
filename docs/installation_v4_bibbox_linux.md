@@ -2,6 +2,10 @@
 
 This software was designed and run on Ubuntu. It might be possible to install and run it on other OS like Windows or MacOS, but we can't guarantee it will perform the same way, or that there won't be any issue.<br>
 
+If you want to host it externally, preferably on a secured (https) domain, you will require an independent ssl certificate for every instance of every app you install on your server. 
+This guide doesn't cover the installation and management of ssl certificates in case of an external domain.<br> 
+
+For this installation you will need to create a local domain to make the services available; this is why we do all the dns setup below. <br>
 To install and use the BIBBOX software please follow these instructions:
 
 ### Install Docker Engine, Docker-compose, Dnsmasq, Git and prepatory Steps, Linux
