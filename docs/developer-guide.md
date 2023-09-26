@@ -1,6 +1,6 @@
 #  BIBBOX developer guide
 
-Basically the  BIBBOX itsself consists of a series of docker containers. The basic container strucutre is given by:
+Basically the  BIBBOX itsself consists of a series of docker containers. The basic container structure is given by:
 
 * Apache Proxyserver (Front-End Server and Proxy Server for the Apps)
 * Backend (Flask Rest API for data exchange from Front-End) 
