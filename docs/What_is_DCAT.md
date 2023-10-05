@@ -9,7 +9,7 @@ A detailled description of DCAT and all corresponding iterrelartions and technic
 
 ## The history of DCAT
 
-The initial DCAT vocabulary was initially crafted and maintained at the Digital Enterprise Research Institute [(DERI)](http://demo.bibbox.org).
+The initial DCAT vocabulary was initially crafted and maintained at the Digital Enterprise Research Institute [(DERI)](www.deri.ie).
 Subsequently, it underwent further enhancements through the efforts of the [eGov Interest Group](https://www.w3.org/egov/) and ultimately achieved standardization in 2014 [VOCAB-DCAT-1]([https://www.w3.org/TR/vocab-dcat-2/](https://www.w3.org/TR/vocab-dcat-1/)) under the purview of the Government Linked Data Working Group [GLD](https://www.w3.org/2011/gld/wiki/Main_Page).
 
 The development of DCAT 2 [VOCAB-DCAT-2](https://www.w3.org/TR/vocab-dcat-2/) was a response to a fresh set of Use Cases and Requirements [DCAT-UCR](https://www.w3.org/TR/dcat-ucr/) identified based on users' experiences with the original DCAT vocabulary, as well as new applications that were not taken into account during the creation of the initial version. 
