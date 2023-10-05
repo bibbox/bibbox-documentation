@@ -5,7 +5,7 @@ DCAT is an RDF vocabulary specifically developed to enhance compatibility among 
 DCAT empowers a data publisher to delineate datasets and data services within a catalog by employing a standardized model and vocabulary, simplifying the retrieval and compilation of metadata from various catalogs. 
 This enhances the ability to locate datasets and data services, encourages a decentralized method for publishing data catalogs, and enables federated searches across catalogs from diverse locations, all accomplished through a unified query mechanism and structure.
 
-A detailled description of DCAT and all corresponding iterrelartions and technical terms is given by the World Wide Web Consortium [W3C](https://www.w3.org).
+A detailled description of DCAT and all corresponding iterrelartions and technical terms is given by the World Wide Web Consortium [(W3C)](https://www.w3.org).
 
 ## The history of DCAT
 
