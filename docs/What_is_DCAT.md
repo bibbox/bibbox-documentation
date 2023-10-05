@@ -14,7 +14,7 @@ Subsequently, it underwent further enhancements through the efforts of the [eGov
 
 The development of DCAT 2 [VOCAB-DCAT-2](https://www.w3.org/TR/vocab-dcat-2/) was a response to a fresh set of Use Cases and Requirements [DCAT-UCR](https://www.w3.org/TR/dcat-ucr/) identified based on users' experiences with the original DCAT vocabulary, as well as new applications that were not taken into account during the creation of the initial version. 
 
-The newest version (DCAT 3) was developed by the Dataset Exchange Working Group, taking into account several crucial use cases and requests that had not been addressed in the previous standardization phase. 
+The newest version [(DCAT 3)](https://www.w3.org/TR/vocab-dcat-3/) was developed by the [Dataset Exchange Working Group](https://www.w3.org/2017/dxwg/wiki/Main_Page), taking into account several crucial use cases and requests that had not been addressed in the previous standardization phase. 
 A summary of the alterations from [VOCAB-DCAT-2](https://www.w3.org/TR/vocab-dcat-2/) can be found in the document's change history section of [Documents Change History](https://www.w3.org/TR/vocab-dcat-3/#changes) of the W3C [(W3C)](w3.org).
 
 
