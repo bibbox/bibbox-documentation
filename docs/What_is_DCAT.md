@@ -8,7 +8,7 @@ This enhances the ability to locate datasets and data services, encourages a dec
 
 ## The history of DCAT
 
-The initial DCAT vocabulary was initially crafted and maintained at the Digital Enterprise Research Institute (DERI). [Link]
+The initial DCAT vocabulary was initially crafted and maintained at the Digital Enterprise Research Institute (DERI). [DERI](http://demo.bibbox.org)
 Subsequently, it underwent further enhancements through the efforts of the eGov Interest Group [Link] and ultimately achieved standardization in 2014 [VOCAB-DCAT-1] [Link] under the purview of the Government Linked Data (GLD) Working Group [[Link].
 
 The development of DCAT 2 [VOCAB-DCAT-2] [Link] was a response to a fresh set of Use Cases and Requirements [DCAT-UCR] [Link] identified based on users' experiences with the original DCAT vocabulary, as well as new applications that were not taken into account during the creation of the initial version. 
