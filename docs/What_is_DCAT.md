@@ -1,6 +1,6 @@
 ## What is DCAT
 
-DCAT is an RDF vocabulary specifically developed to enhance compatibility among data catalogs which are published and available on the web.
+DCAT stands for Data Catalog Vocabolary and is an RDF vocabulary specifically developed to enhance compatibility among data catalogs which are published and available on the web.
 
 DCAT empowers a data publisher to delineate datasets and data services within a catalog by employing a standardized model and vocabulary, simplifying the retrieval and compilation of metadata from various catalogs. 
 This enhances the ability to locate datasets and data services, encourages a decentralized method for publishing data catalogs, and enables federated searches across catalogs from diverse locations, all accomplished through a unified query mechanism and structure.
