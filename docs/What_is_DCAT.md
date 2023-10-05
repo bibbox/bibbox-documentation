@@ -20,7 +20,7 @@ A summary of the alterations from [VOCAB-DCAT-2](https://www.w3.org/TR/vocab-dca
 
 ## DCAT and the FAIR data point
 
-DCAT is, among other things, used as a semantic metadata description to form the basis of the FAIR data point (FDP) metadata content, which is in detail described on [fairdatapoint.org](https://specs.fairdatapoint.org/).
+DCAT is, among other things, used as a semantic metadata description to form the basis of the [FAIR data point (FDP)](https://github.com/bibbox/bibbox-documentation/blob/master/docs/What_is_FDP.md) metadata content, which is in detail described on [fairdatapoint.org](https://specs.fairdatapoint.org/).
 
 The FAIR principles emphasize the crucial role of metadata, with each of the four principles having a connection to metadata in some manner. Metadata can be described as information that offers insights into other data or, more broadly, information about other digital objects/data. This information encompasses details concerning the source, structure, rights, obligations, or other characteristics of digital objects. The description of the data or digital objects is done on an aggregated level. The approach to metadata within the FAIR Data Point aligns with this concept, supporting the creation of metadata for various types of digital objects.
 
