@@ -15,3 +15,8 @@ The development of DCAT 2 [VOCAB-DCAT-2] [Link] was a response to a fresh set of
 
 The newest version (DCAT 3) was developed by the Dataset Exchange Working Group, taking into account several crucial use cases and requests that had not been addressed in the previous standardization phase. 
 A summary of the alterations from [VOCAB-DCAT-2] [Link] can be found in the document's change history section of xxx [Link].
+
+
+## DCAT and the FAIR data point
+
+work in progress...
