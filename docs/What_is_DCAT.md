@@ -20,4 +20,9 @@ A summary of the alterations from [VOCAB-DCAT-2](https://www.w3.org/TR/vocab-dca
 
 ## DCAT and the FAIR data point
 
-work in progress...
+DCAT is, among other things, used as a semantic metadata description to form the basis of the FAIR data point (FDP) metadata content, which is in detail described on [fairdatapoint.org](https://specs.fairdatapoint.org/).
+
+The FAIR principles emphasize the crucial role of metadata, with each of the four principles having a connection to metadata in some manner. Metadata can be described as information that offers insights into other data or, more broadly, information about other digital objects/data. This information encompasses details concerning the source, structure, rights, obligations, or other characteristics of digital objects. The description of the data or digital objects is done on an aggregated level. The approach to metadata within the FAIR Data Point aligns with this concept, supporting the creation of metadata for various types of digital objects.
+
+
+Within the DCAT model, 'Resources' denote entities that are eligible for the description through a metadata record. As an abstract class, it is not intended for direct usage. Instead, it is recommended to utilize one of its specialized subclasses, such as 'Dataset' or 'Data Service.' A 'Dataset' represents a collection of data, while a 'Data Service' represents services accessible through an interface, like an API, that provide access to datasets. Another relevant subclass, is defined as 'Catalog,' which serves as an aggregation of metadata records pertaining to digital objects. For example, a 'Catalog' might encompass references to metadata records associated with 'Datasets'. 
