@@ -157,5 +157,19 @@ Specify domainname + TLD (e.g. silicolabv4.bibbox.org):
 <br>Afterwards everything should be working as intended.<br>
 <br>Thank you and have a nice day!
 
-
-
+## Install BIBBOX Apps
+### Installation within BIBBOX
+To install an App within the BIBBOX just select an App and click install. Futher instructions are given in the install instruction (INSTALL.md) of each App.
+### Standalone Installation
+A standalone version is also provided for each App. An installation guide for the standalone version is present in the README.md of each App. And usually include the following commands:
+```
+git clone <repo_url>
+cd <repo_directory>
+docker network create bibbox-default-network
+docker-compose up -d
+```
+#### Hint for Mac's
+If the standalone version does not work on Mac, please try this command to set a default docker platfrom before running `docker-compose up -d`
+```
+export DOCKER_DEFAULT_PLATFORM=linux/amd64
+```
