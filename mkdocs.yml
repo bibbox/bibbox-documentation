@@ -1,6 +1,6 @@
 site_name: BIBBOX
 
-pages:
+nav:
     - Introduction: index.md
     - Install guide: installation_v4_bibbox_linux.md
     - User guide: user-guide.md
