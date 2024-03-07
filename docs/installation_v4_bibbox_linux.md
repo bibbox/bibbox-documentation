@@ -28,6 +28,9 @@ Dnsmasq is used to create a local domain to resolve your requests towards the in
 Note: if you do something wrong your internet will not work anymore.
 
 #### Installing and configuring dnsmasq:<br>
+```
+sudo apt install dnsmasq -y
+```
 Uninstall `systemd-resolved` package. It isn’t necessary to have.
 ```
 sudo systemctl disable systemd-resolved
