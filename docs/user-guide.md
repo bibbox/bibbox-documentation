@@ -1,5 +1,20 @@
 #  BIBBOX user guide
 
+## First Time Login
+
+To login the first time user these credetials:
+
+* Username: **tempadmin** 
+* Password: **tempadmin** 
+
+Go to the **Users** tab and add a new admin user with a secure password. Logout and login angain as the new admin user, now you should delete the tempadmin user.
+
+Personalize the BIBBOX by editing:
+* The landing page (click on the BIBBOX icon on the top left corner to get to the landing page). 
+* The contact page (click on Contacts on the bottom). 
+* The partner page (click on Partners on the bottom). 
+* The imprint page (click on Imprint on the bottom). 
+
 ## User guide
 
 The first page of the BIBBOX shows you the landing page and give you the opportunity to sign in.
