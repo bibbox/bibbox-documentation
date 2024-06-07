@@ -39,7 +39,6 @@ Uninstall `systemd-resolved` package. It isn’t necessary to have.
 ```
 sudo systemctl disable systemd-resolved
 sudo systemctl stop systemd-resolved
-sudo apt purge systemd-resolved
 ```
 <br>Disable dnsmasq in the `/etc/NetworkManager/NetworkManager.conf`. Also, ensure to have the `dns=none` line:<br> `sudo nano /etc/NetworkManager/NetworkManager.conf`
 
